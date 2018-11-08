@@ -1,0 +1,591 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DADE6D3A21945A3300B896CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADE6D3921945A3300B896CA /* AppDelegate.swift */; };
+		DADE6D3C21945A3300B896CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADE6D3B21945A3300B896CA /* ViewController.swift */; };
+		DADE6D3F21945A3300B896CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DADE6D3D21945A3300B896CA /* Main.storyboard */; };
+		DADE6D4121945A3500B896CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DADE6D4021945A3500B896CA /* Assets.xcassets */; };
+		DADE6D4421945A3500B896CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DADE6D4221945A3500B896CA /* LaunchScreen.storyboard */; };
+		DADE6D4F21945A3500B896CA /* SoundOfCitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADE6D4E21945A3500B896CA /* SoundOfCitiesTests.swift */; };
+		DADE6D5A21945A3500B896CA /* SoundOfCitiesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADE6D5921945A3500B896CA /* SoundOfCitiesUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DADE6D4B21945A3500B896CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DADE6D2E21945A3300B896CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DADE6D3521945A3300B896CA;
+			remoteInfo = SoundOfCities;
+		};
+		DADE6D5621945A3500B896CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DADE6D2E21945A3300B896CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DADE6D3521945A3300B896CA;
+			remoteInfo = SoundOfCities;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DADE6D3621945A3300B896CA /* SoundOfCities.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundOfCities.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DADE6D3921945A3300B896CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DADE6D3B21945A3300B896CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DADE6D3E21945A3300B896CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DADE6D4021945A3500B896CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DADE6D4321945A3500B896CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DADE6D4521945A3500B896CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DADE6D4A21945A3500B896CA /* SoundOfCitiesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoundOfCitiesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DADE6D4E21945A3500B896CA /* SoundOfCitiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundOfCitiesTests.swift; sourceTree = "<group>"; };
+		DADE6D5021945A3500B896CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DADE6D5521945A3500B896CA /* SoundOfCitiesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoundOfCitiesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DADE6D5921945A3500B896CA /* SoundOfCitiesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundOfCitiesUITests.swift; sourceTree = "<group>"; };
+		DADE6D5B21945A3500B896CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DADE6D3321945A3300B896CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DADE6D4721945A3500B896CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DADE6D5221945A3500B896CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DADE6D2D21945A3300B896CA = {
+			isa = PBXGroup;
+			children = (
+				DADE6D3821945A3300B896CA /* SoundOfCities */,
+				DADE6D4D21945A3500B896CA /* SoundOfCitiesTests */,
+				DADE6D5821945A3500B896CA /* SoundOfCitiesUITests */,
+				DADE6D3721945A3300B896CA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DADE6D3721945A3300B896CA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DADE6D3621945A3300B896CA /* SoundOfCities.app */,
+				DADE6D4A21945A3500B896CA /* SoundOfCitiesTests.xctest */,
+				DADE6D5521945A3500B896CA /* SoundOfCitiesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DADE6D3821945A3300B896CA /* SoundOfCities */ = {
+			isa = PBXGroup;
+			children = (
+				DADE6D3921945A3300B896CA /* AppDelegate.swift */,
+				DADE6D3B21945A3300B896CA /* ViewController.swift */,
+				DADE6D3D21945A3300B896CA /* Main.storyboard */,
+				DADE6D4021945A3500B896CA /* Assets.xcassets */,
+				DADE6D4221945A3500B896CA /* LaunchScreen.storyboard */,
+				DADE6D4521945A3500B896CA /* Info.plist */,
+			);
+			path = SoundOfCities;
+			sourceTree = "<group>";
+		};
+		DADE6D4D21945A3500B896CA /* SoundOfCitiesTests */ = {
+			isa = PBXGroup;
+			children = (
+				DADE6D4E21945A3500B896CA /* SoundOfCitiesTests.swift */,
+				DADE6D5021945A3500B896CA /* Info.plist */,
+			);
+			path = SoundOfCitiesTests;
+			sourceTree = "<group>";
+		};
+		DADE6D5821945A3500B896CA /* SoundOfCitiesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DADE6D5921945A3500B896CA /* SoundOfCitiesUITests.swift */,
+				DADE6D5B21945A3500B896CA /* Info.plist */,
+			);
+			path = SoundOfCitiesUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DADE6D3521945A3300B896CA /* SoundOfCities */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DADE6D5E21945A3500B896CA /* Build configuration list for PBXNativeTarget "SoundOfCities" */;
+			buildPhases = (
+				DADE6D3221945A3300B896CA /* Sources */,
+				DADE6D3321945A3300B896CA /* Frameworks */,
+				DADE6D3421945A3300B896CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SoundOfCities;
+			productName = SoundOfCities;
+			productReference = DADE6D3621945A3300B896CA /* SoundOfCities.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DADE6D4921945A3500B896CA /* SoundOfCitiesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DADE6D6121945A3500B896CA /* Build configuration list for PBXNativeTarget "SoundOfCitiesTests" */;
+			buildPhases = (
+				DADE6D4621945A3500B896CA /* Sources */,
+				DADE6D4721945A3500B896CA /* Frameworks */,
+				DADE6D4821945A3500B896CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DADE6D4C21945A3500B896CA /* PBXTargetDependency */,
+			);
+			name = SoundOfCitiesTests;
+			productName = SoundOfCitiesTests;
+			productReference = DADE6D4A21945A3500B896CA /* SoundOfCitiesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DADE6D5421945A3500B896CA /* SoundOfCitiesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DADE6D6421945A3500B896CA /* Build configuration list for PBXNativeTarget "SoundOfCitiesUITests" */;
+			buildPhases = (
+				DADE6D5121945A3500B896CA /* Sources */,
+				DADE6D5221945A3500B896CA /* Frameworks */,
+				DADE6D5321945A3500B896CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DADE6D5721945A3500B896CA /* PBXTargetDependency */,
+			);
+			name = SoundOfCitiesUITests;
+			productName = SoundOfCitiesUITests;
+			productReference = DADE6D5521945A3500B896CA /* SoundOfCitiesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DADE6D2E21945A3300B896CA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Geart Otten";
+				TargetAttributes = {
+					DADE6D3521945A3300B896CA = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					DADE6D4921945A3500B896CA = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = DADE6D3521945A3300B896CA;
+					};
+					DADE6D5421945A3500B896CA = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = DADE6D3521945A3300B896CA;
+					};
+				};
+			};
+			buildConfigurationList = DADE6D3121945A3300B896CA /* Build configuration list for PBXProject "SoundOfCities" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DADE6D2D21945A3300B896CA;
+			productRefGroup = DADE6D3721945A3300B896CA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DADE6D3521945A3300B896CA /* SoundOfCities */,
+				DADE6D4921945A3500B896CA /* SoundOfCitiesTests */,
+				DADE6D5421945A3500B896CA /* SoundOfCitiesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DADE6D3421945A3300B896CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DADE6D4421945A3500B896CA /* LaunchScreen.storyboard in Resources */,
+				DADE6D4121945A3500B896CA /* Assets.xcassets in Resources */,
+				DADE6D3F21945A3300B896CA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DADE6D4821945A3500B896CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DADE6D5321945A3500B896CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DADE6D3221945A3300B896CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DADE6D3C21945A3300B896CA /* ViewController.swift in Sources */,
+				DADE6D3A21945A3300B896CA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DADE6D4621945A3500B896CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DADE6D4F21945A3500B896CA /* SoundOfCitiesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DADE6D5121945A3500B896CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DADE6D5A21945A3500B896CA /* SoundOfCitiesUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DADE6D4C21945A3500B896CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DADE6D3521945A3300B896CA /* SoundOfCities */;
+			targetProxy = DADE6D4B21945A3500B896CA /* PBXContainerItemProxy */;
+		};
+		DADE6D5721945A3500B896CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DADE6D3521945A3300B896CA /* SoundOfCities */;
+			targetProxy = DADE6D5621945A3500B896CA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DADE6D3D21945A3300B896CA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DADE6D3E21945A3300B896CA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DADE6D4221945A3500B896CA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DADE6D4321945A3500B896CA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DADE6D5C21945A3500B896CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DADE6D5D21945A3500B896CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DADE6D5F21945A3500B896CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7U2CF25QL7;
+				INFOPLIST_FILE = SoundOfCities/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yoni.SoundOfCities;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DADE6D6021945A3500B896CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7U2CF25QL7;
+				INFOPLIST_FILE = SoundOfCities/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yoni.SoundOfCities;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DADE6D6221945A3500B896CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7U2CF25QL7;
+				INFOPLIST_FILE = SoundOfCitiesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yoni.SoundOfCitiesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SoundOfCities.app/SoundOfCities";
+			};
+			name = Debug;
+		};
+		DADE6D6321945A3500B896CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7U2CF25QL7;
+				INFOPLIST_FILE = SoundOfCitiesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yoni.SoundOfCitiesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SoundOfCities.app/SoundOfCities";
+			};
+			name = Release;
+		};
+		DADE6D6521945A3500B896CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7U2CF25QL7;
+				INFOPLIST_FILE = SoundOfCitiesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yoni.SoundOfCitiesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SoundOfCities;
+			};
+			name = Debug;
+		};
+		DADE6D6621945A3500B896CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7U2CF25QL7;
+				INFOPLIST_FILE = SoundOfCitiesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yoni.SoundOfCitiesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SoundOfCities;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DADE6D3121945A3300B896CA /* Build configuration list for PBXProject "SoundOfCities" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DADE6D5C21945A3500B896CA /* Debug */,
+				DADE6D5D21945A3500B896CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DADE6D5E21945A3500B896CA /* Build configuration list for PBXNativeTarget "SoundOfCities" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DADE6D5F21945A3500B896CA /* Debug */,
+				DADE6D6021945A3500B896CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DADE6D6121945A3500B896CA /* Build configuration list for PBXNativeTarget "SoundOfCitiesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DADE6D6221945A3500B896CA /* Debug */,
+				DADE6D6321945A3500B896CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DADE6D6421945A3500B896CA /* Build configuration list for PBXNativeTarget "SoundOfCitiesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DADE6D6521945A3500B896CA /* Debug */,
+				DADE6D6621945A3500B896CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DADE6D2E21945A3300B896CA /* Project object */;
+}
