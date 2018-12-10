@@ -13,13 +13,19 @@ import MapKit
 class MapViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     var locationManager = CLLocationManager()
-    var circle = MKCircle()
-    var fakeCircleLocation: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 53.21168578930956, longitude: 5.798549807569524)
+    
+    var circleLocation: CLLocationCoordinate2D?
+    var package = Package()
+    var track = Track()
+    var zone = Zone.instance
+    var zoneManager = ZoneManager.instance
+    var overlays: [MKOverlay] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupLocation()
         mapView.delegate = self
+        setupLocation()
+        
     }
     
     func setupLocation(){
@@ -27,48 +33,59 @@ class MapViewController: UIViewController {
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
-        setCircleOnUserLocation()
+        setCircleLocation()
     }
-    func setCircleOnUserLocation() {
-        let region = CLCircularRegion(center: fakeCircleLocation, radius: 5, identifier: "geofence")
-        mapView.removeOverlays(mapView.overlays)
-        locationManager.startMonitoring(for: region)
-        circle = MKCircle(center: fakeCircleLocation, radius: region.radius)
-        mapView.addOverlay(circle)
+    func setCircleLocation() {
+        for i in 0...zoneManager.zones.count-1{
+            var circle = MKCircle()
+            circleLocation = CLLocationCoordinate2D(latitude: zoneManager.zones[i].latitude!, longitude: zoneManager.zones[i].longitude!)
+            let region = CLCircularRegion(center: circleLocation!, radius: zoneManager.zones[i].radius!, identifier: zoneManager.zones[i].zoneName!)
+            region.notifyOnEntry = true
+            region.notifyOnExit = true
+            mapView.removeOverlays(mapView.overlays)
+            locationManager.startMonitoring(for: region)
+            circle = MKCircle(center: circleLocation!, radius: region.radius)
+        
+            overlays.append(circle)
+        }
+        mapView.addOverlays(overlays)
         
     }
     func checkIfUserIsInZone(locationValue: CLLocationCoordinate2D){
-        var zoneLocation: CLLocation = CLLocation(latitude: fakeCircleLocation.latitude, longitude: fakeCircleLocation.longitude)
-        
+        var zoneLocation: CLLocation = CLLocation(latitude: zoneManager.zones[1].latitude!, longitude: zoneManager.zones[1].longitude!)
+//
         var userLocation: CLLocation = CLLocation(latitude: locationValue.latitude, longitude: locationValue.longitude)
-        
-        if userLocation.distance(from: zoneLocation) > circle.radius{
-            print("user left zone")
-        }else{
-            print("user is in zone")
-        }
+//
         
     }
 }
 extension MapViewController: CLLocationManagerDelegate{
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         mapView.showsUserLocation = true
-        
+        print("test")
         
         guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
         checkIfUserIsInZone(locationValue: locValue)
 //        print("locations = \(locValue.latitude) \(locValue.longitude)")
     }
+    
+    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+        track.play(name: region.identifier)
+    }
 }
 extension MapViewController: MKMapViewDelegate{
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
-        guard let circelOverLay = overlay as? MKCircle else {return MKOverlayRenderer()}
+//        guard let circelOverLay = overlay as? MKCircle else {return MKOverlayRenderer()}
         
-        let circleRenderer = MKCircleRenderer(circle: circelOverLay)
-        circleRenderer.strokeColor = .blue
-        circleRenderer.fillColor = .blue
-        circleRenderer.alpha = 0.2
-        return circleRenderer
+        if(overlay is MKCircle){
+            let circleRenderer = MKCircleRenderer(circle: overlay as! MKCircle)
+            circleRenderer.strokeColor = UIColor.magenta
+            circleRenderer.lineWidth = 4
+//            circleRenderer.fillColor = UIColor.magenta
+            circleRenderer.alpha = 0.5
+            return circleRenderer
+        }
+        return MKOverlayRenderer()
     }
 }
 

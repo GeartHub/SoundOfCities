@@ -6,8 +6,8 @@
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>This application needs your location for the best possible experience</string>
-    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-    <string>This application needs your location for the best possible experience</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>This application needs your location for the best possible experience</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>

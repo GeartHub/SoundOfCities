@@ -11,29 +11,24 @@ import AVFoundation
 import CoreLocation
 
 class MainViewController: UIViewController {
-
-    var playerQueue = AVQueuePlayer()
-    var player = AVPlayer()
-//    var playerLooper = AVPlayerLooper()
     
-    
-    var songArray: [String] = ["arpeggio_100", "brass_100", "percussion_100_1", "percussion_100_2", "strings_100"]
+    var track = Track()
+    var playerPool = AVAudioPlayerPool()
+    var package = Package()
+    var zoneManager = ZoneManager.instance
     
     var count = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        for _ in songArray{
-            let urlPath = Bundle.main.path(forResource: songArray[count], ofType: "mp3")
-            let fileURL = URL(fileURLWithPath: urlPath!)
-            let playerItem = AVPlayerItem(url: fileURL)
-            playerQueue.insert(playerItem, after: nil)
-            count += 1
-        }
         prepareSongsAndSession()
+        package.makeTestPackage()
+    }
+    @IBAction func playSong(_ sender: Any) {
+//        track.play(count: count)
+        count += 1
     }
     func prepareSongsAndSession(){
-        
         let audioSession = AVAudioSession.sharedInstance()
             
         do{
@@ -44,4 +39,3 @@ class MainViewController: UIViewController {
         }
     }
 }
-

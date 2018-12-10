@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KWv-MD-upp">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,6 +10,31 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Launch Screen View Controller-->
+        <scene sceneID="7dh-rp-mSN">
+            <objects>
+                <viewController id="KWv-MD-upp" customClass="LaunchScreenViewController" customModule="SoundOfCities" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FWo-Fz-D7j">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Leeuwarden" translatesAutoresizingMaskIntoConstraints="NO" id="fAH-dK-GSm">
+                                <rect key="frame" x="115" y="239" width="144" height="189"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="TjR-D9-IBa"/>
+                    </view>
+                    <connections>
+                        <outlet property="popImage" destination="fAH-dK-GSm" id="dkn-cs-PdZ"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="AfterLaunchSegue" id="OFv-jz-9vC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lXo-vf-Wwn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-558" y="27"/>
+        </scene>
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -23,7 +48,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add next song"/>
                                 <connections>
-                                    <segue destination="mnh-I0-rwQ" kind="show" id="NXP-Lx-T73"/>
+                                    <segue destination="mnh-I0-rwQ" kind="show" id="Pvx-PZ-p1O"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -43,12 +68,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="vwx-ag-UBi">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="vwx-ag-UBi">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vwx-ag-UBi" firstAttribute="bottom" secondItem="Vn2-81-Yy9" secondAttribute="bottom" id="XHf-Ho-yUG"/>
+                            <constraint firstItem="vwx-ag-UBi" firstAttribute="trailing" secondItem="Vn2-81-Yy9" secondAttribute="trailing" id="iWJ-Ks-KFb"/>
+                            <constraint firstItem="vwx-ag-UBi" firstAttribute="leading" secondItem="Vn2-81-Yy9" secondAttribute="leading" id="v0W-eH-y1W"/>
+                            <constraint firstItem="vwx-ag-UBi" firstAttribute="top" secondItem="OOd-Ze-Hu7" secondAttribute="top" id="xss-I6-UWs"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Vn2-81-Yy9"/>
                     </view>
                     <connections>
@@ -60,4 +90,7 @@
             <point key="canvasLocation" x="932" y="26.53673163418291"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Leeuwarden" width="239" height="342"/>
+    </resources>
 </document>

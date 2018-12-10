@@ -8,21 +8,21 @@
 
 import Foundation
 import CoreLocation
+import MapKit
 
 class ZoneManager{
-    func checkZoneChange(){
-        var zoneLocation: CLLocation = CLLocation(latitude: fakeCircleLocation.latitude, longitude: fakeCircleLocation.longitude)
-        
-        var userLocation: CLLocation = CLLocation(latitude: locationValue.latitude, longitude: locationValue.longitude)
-        
-        if userLocation.distance(from: zoneLocation) > circle.radius{
-            print("user left zone")
-        }else{
-            print("user is in zone")
-        }
-    }
-    func didChangeZone(){
-        
-    }
+    var lastZoneName: String = ""
+    var circle = MKCircle()
     
+    var zones: [Zone] = []
+    
+    static let instance: ZoneManager = ZoneManager()
+
+    func checkZoneChange(){
+        
+    }
+    func inTheZone()->Bool{
+        return true
+    }
+
 }
