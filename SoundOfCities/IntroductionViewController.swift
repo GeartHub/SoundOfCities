@@ -10,8 +10,9 @@ import UIKit
 import AVFoundation
 import CoreLocation
 
-class MainViewController: UIViewController {
+class IntroductionViewController: UIViewController {
     
+    @IBOutlet weak var nextButton: UIButton!
     var track = Track()
     var playerPool = AVAudioPlayerPool()
     var package = Package()
@@ -23,6 +24,7 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         prepareSongsAndSession()
         package.makeTestPackage()
+        nextButton.imageEdgeInsets = UIEdgeInsets(top: 10,left: 5,bottom: 10,right: 5)
     }
     @IBAction func playSong(_ sender: Any) {
 //        track.play(count: count)

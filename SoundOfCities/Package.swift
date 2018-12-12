@@ -24,8 +24,8 @@ class Package {
         newTestZone.radius = 50
         
         for i in 0...4{
-            newTestZone.latitude = 53.21168578930956 + 00.00000000000056
-            newTestZone.longitude = 5.798549807569524 + 00.00000000000056
+            newTestZone.latitude = 53.21168578930956
+            newTestZone.longitude = 5.79
             newTestZone.zoneName = zoneNames[i]
             
             packageArray.append(newTestPackage)

@@ -10,6 +10,9 @@
 		DA10F971219DD5E9001F6AD7 /* ZoneManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA10F970219DD5E9001F6AD7 /* ZoneManager.swift */; };
 		DA10F973219DD731001F6AD7 /* ShapeEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA10F972219DD731001F6AD7 /* ShapeEngine.swift */; };
 		DA10F975219DDAC0001F6AD7 /* AudioEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA10F974219DDAC0001F6AD7 /* AudioEngine.swift */; };
+		DA2FD21A21BFFEE2003BE033 /* StyleStuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2FD21921BFFEE2003BE033 /* StyleStuff.swift */; };
+		DA508C7C21BEAB60000C2C5B /* colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA508C7B21BEAB60000C2C5B /* colors.swift */; };
+		DA508C7E21BF1664000C2C5B /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA508C7D21BF1664000C2C5B /* ButtonStyles.swift */; };
 		DA6C293921A4B01D00976470 /* arpeggio_100.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DA6C293721A4AFAC00976470 /* arpeggio_100.mp3 */; };
 		DA7719DF21A2E190009C0F62 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7719DE21A2E190009C0F62 /* LaunchScreenViewController.swift */; };
 		DA7719E121A2F821009C0F62 /* AVAudioPlayerPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7719E021A2F821009C0F62 /* AVAudioPlayerPool.swift */; };
@@ -21,7 +24,7 @@
 		DAD7BBA721946C2B00BEF33F /* percussion_100_2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DAD7BBA221946C2B00BEF33F /* percussion_100_2.mp3 */; };
 		DAD7BBA921946C2B00BEF33F /* strings_100.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DAD7BBA421946C2B00BEF33F /* strings_100.mp3 */; };
 		DADE6D3A21945A3300B896CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADE6D3921945A3300B896CA /* AppDelegate.swift */; };
-		DADE6D3C21945A3300B896CA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADE6D3B21945A3300B896CA /* MainViewController.swift */; };
+		DADE6D3C21945A3300B896CA /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADE6D3B21945A3300B896CA /* IntroductionViewController.swift */; };
 		DADE6D3F21945A3300B896CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DADE6D3D21945A3300B896CA /* Main.storyboard */; };
 		DADE6D4121945A3500B896CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DADE6D4021945A3500B896CA /* Assets.xcassets */; };
 		DADE6D4421945A3500B896CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DADE6D4221945A3500B896CA /* LaunchScreen.storyboard */; };
@@ -51,6 +54,9 @@
 		DA10F970219DD5E9001F6AD7 /* ZoneManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoneManager.swift; sourceTree = "<group>"; };
 		DA10F972219DD731001F6AD7 /* ShapeEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeEngine.swift; sourceTree = "<group>"; };
 		DA10F974219DDAC0001F6AD7 /* AudioEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioEngine.swift; sourceTree = "<group>"; };
+		DA2FD21921BFFEE2003BE033 /* StyleStuff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleStuff.swift; sourceTree = "<group>"; };
+		DA508C7B21BEAB60000C2C5B /* colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colors.swift; sourceTree = "<group>"; };
+		DA508C7D21BF1664000C2C5B /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
 		DA6C293721A4AFAC00976470 /* arpeggio_100.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = arpeggio_100.mp3; sourceTree = "<group>"; };
 		DA7719DE21A2E190009C0F62 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		DA7719E021A2F821009C0F62 /* AVAudioPlayerPool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVAudioPlayerPool.swift; sourceTree = "<group>"; };
@@ -63,7 +69,7 @@
 		DAD7BBA421946C2B00BEF33F /* strings_100.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = strings_100.mp3; sourceTree = "<group>"; };
 		DADE6D3621945A3300B896CA /* SoundOfCities.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundOfCities.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DADE6D3921945A3300B896CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DADE6D3B21945A3300B896CA /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		DADE6D3B21945A3300B896CA /* IntroductionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
 		DADE6D3E21945A3300B896CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DADE6D4021945A3500B896CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DADE6D4321945A3500B896CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -142,17 +148,20 @@
 			children = (
 				DAD7BB9F21946BF600BEF33F /* Audio */,
 				DADE6D3921945A3300B896CA /* AppDelegate.swift */,
-				DADE6D3B21945A3300B896CA /* MainViewController.swift */,
+				DADE6D3B21945A3300B896CA /* IntroductionViewController.swift */,
 				DAF71D5B219B706900530C81 /* MapViewController.swift */,
 				DA10F972219DD731001F6AD7 /* ShapeEngine.swift */,
 				DA10F970219DD5E9001F6AD7 /* ZoneManager.swift */,
 				DA81ABC721B537550007843E /* Package.swift */,
 				DA81ABC521B530190007843E /* Zone.swift */,
 				DADE6D3D21945A3300B896CA /* Main.storyboard */,
+				DA508C7D21BF1664000C2C5B /* ButtonStyles.swift */,
+				DA2FD21921BFFEE2003BE033 /* StyleStuff.swift */,
 				DADE6D4021945A3500B896CA /* Assets.xcassets */,
 				DADE6D4221945A3500B896CA /* LaunchScreen.storyboard */,
 				DADE6D4521945A3500B896CA /* Info.plist */,
 				DA7719DE21A2E190009C0F62 /* LaunchScreenViewController.swift */,
+				DA508C7B21BEAB60000C2C5B /* colors.swift */,
 			);
 			path = SoundOfCities;
 			sourceTree = "<group>";
@@ -317,14 +326,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA10F975219DDAC0001F6AD7 /* AudioEngine.swift in Sources */,
-				DADE6D3C21945A3300B896CA /* MainViewController.swift in Sources */,
+				DA508C7C21BEAB60000C2C5B /* colors.swift in Sources */,
+				DADE6D3C21945A3300B896CA /* IntroductionViewController.swift in Sources */,
 				DA7719E121A2F821009C0F62 /* AVAudioPlayerPool.swift in Sources */,
 				DAF71D5C219B706900530C81 /* MapViewController.swift in Sources */,
 				DADE6D3A21945A3300B896CA /* AppDelegate.swift in Sources */,
 				DA7719E321A303F1009C0F62 /* Track.swift in Sources */,
+				DA508C7E21BF1664000C2C5B /* ButtonStyles.swift in Sources */,
 				DA10F971219DD5E9001F6AD7 /* ZoneManager.swift in Sources */,
 				DA81ABC621B530190007843E /* Zone.swift in Sources */,
 				DA10F973219DD731001F6AD7 /* ShapeEngine.swift in Sources */,
+				DA2FD21A21BFFEE2003BE033 /* StyleStuff.swift in Sources */,
 				DA81ABC821B537550007843E /* Package.swift in Sources */,
 				DA7719DF21A2E190009C0F62 /* LaunchScreenViewController.swift in Sources */,
 			);
