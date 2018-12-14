@@ -9,12 +9,12 @@ import AVFoundation
 
 
 class AVAudioPlayerPool {
-    var players : [AVAudioPlayer] = []
+    var activePlayers : [AVAudioPlayer] = []
 
     // Given the URL of a sound file, either create or reuse an audio player
     func playerWithURL(url : URL) -> AVAudioPlayer? {
         // Try to find a player that can be reused and is not playing
-        let availablePlayers = players.filter { (player) -> Bool in
+        let availablePlayers = activePlayers.filter { (player) -> Bool in
             return player.isPlaying == false && player.url == url
         }
         
@@ -25,7 +25,7 @@ class AVAudioPlayerPool {
         do{
             var newPlayer: AVAudioPlayer? = nil
             try newPlayer = AVAudioPlayer(contentsOf:url)
-            players.append(newPlayer!)
+            activePlayers.append(newPlayer!)
             return newPlayer
         }catch let error{
             print(error)

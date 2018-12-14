@@ -23,12 +23,17 @@ class MapViewController: UIViewController {
     var overlays: [MKOverlay] = []
     let request = MKDirections.Request()
     
+    @IBOutlet weak var testText: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
         setupLocation()
         testView.layer.addGradienBorder(colors: [resonancePurple,resonanceOrange,resonancePink], width: 4, cornerRadius: 20)
         testView.cornerRadius = 20
+        testText.font = UIFont(name: "ModernSansLight" , size: 20)
+        testText.font.withSize(20)
+        testText.sizeToFit()
     }
     
     func setupLocation(){
@@ -60,7 +65,6 @@ class MapViewController: UIViewController {
     
         myAnnotation.title = zoneManager.zones[0].zoneName
         mapView.addAnnotation(myAnnotation)
-        setupDirections()
     }
     func setupDirections() {
         request.source =  MKMapItem(placemark: MKPlacemark(coordinate: (locationManager.location?.coordinate)!, addressDictionary: nil))
@@ -93,13 +97,17 @@ extension MapViewController: CLLocationManagerDelegate{
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
         track.play(name: region.identifier)
     }
+    func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
+        track.stop(name: region.identifier)
+        print(region.identifier , " has been exited")
+    }
 }
 extension MapViewController: MKMapViewDelegate{
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         
         if(overlay is MKCircle){
             let circleRenderer = MKCircleRenderer(circle: overlay as! MKCircle)
-//            circleRenderer.strokeColor = resonancePink
+            circleRenderer.strokeColor = resonancePink
             
             return circleRenderer
         }else if(overlay is MKPolyline){
@@ -112,8 +120,6 @@ extension MapViewController: MKMapViewDelegate{
     }
 
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        print("this called")
-        
         if annotation is MKUserLocation {
             return nil
         }

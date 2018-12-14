@@ -9,9 +9,8 @@
 import UIKit
 
 extension UIFont {
-
   class var textStyle: UIFont {
-    return UIFont(name: "ModernSansLight", size: 17.5)!
+    return UIFont(name: "ModernSansLight", size: 10)!
   }
 
 }

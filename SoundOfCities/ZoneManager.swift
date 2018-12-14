@@ -18,11 +18,4 @@ class ZoneManager{
     
     static let instance: ZoneManager = ZoneManager()
 
-    func checkZoneChange(){
-        
-    }
-    func inTheZone()->Bool{
-        return true
-    }
-
 }

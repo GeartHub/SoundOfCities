@@ -10,7 +10,7 @@ import Foundation
 
 class Package {
     public var zones: [Zone] = []
-    public var zoneNames = ["arpeggio_100", "brass_100", "percussion_100_1", "percussion_100_2", "strings_100"]
+    public var zoneNames = ["drums_loop", "fx_loop", "strings_loop", "sub_loop", "synths_loop"]
     public var audioEffects: String?
     
     public var packageArray: [Package] = []
@@ -33,7 +33,6 @@ class Package {
             
             zoneManager.zones.append(Zone.init(from: packageArray[i]))
             zones.append(Zone.init(from: packageArray[i]))
-            
         }
     }
 }
