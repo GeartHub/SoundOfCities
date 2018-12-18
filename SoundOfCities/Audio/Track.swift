@@ -39,6 +39,7 @@ class Track: NSObject{
         let fileURL = URL(fileURLWithPath: urlPath!)
         let theActivePlayerToStop = playerPool.activePlayers.first(where: {$0.url == fileURL})
         theActivePlayerToStop?.setVolume(0, fadeDuration: 10)
+        theActivePlayerToStop?.currentTime = 0
         if theActivePlayerToStop?.volume == 0{
             theActivePlayerToStop?.stop()
         }

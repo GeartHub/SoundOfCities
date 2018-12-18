@@ -24,12 +24,12 @@ class Package {
         newTestZone.radius = 50
         
         for i in 0...4{
-            newTestZone.latitude = 53.21168578930956
-            newTestZone.longitude = 5.79
+            newTestZone.latitude = 53.211581
+            newTestZone.longitude = 5.798351
             newTestZone.zoneName = zoneNames[i]
             
             packageArray.append(newTestPackage)
-            newTestZone.radius = newTestZone.radius! + 500
+            newTestZone.radius = newTestZone.radius! + 100
             
             zoneManager.zones.append(Zone.init(from: packageArray[i]))
             zones.append(Zone.init(from: packageArray[i]))

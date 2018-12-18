@@ -14,26 +14,20 @@ class MapViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     var locationManager = CLLocationManager()
     
-    @IBOutlet weak var testView: UIView!
+    @IBOutlet weak var menuButton: UIButton!
+    
     var circleLocation: CLLocationCoordinate2D?
-    var package = Package()
     var track = Track()
-    var zone = Zone.instance
     var zoneManager = ZoneManager.instance
     var overlays: [MKOverlay] = []
     let request = MKDirections.Request()
-    
-    @IBOutlet weak var testText: UILabel!
+    let shapeEngine = ShapeEngine()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
         setupLocation()
-        testView.layer.addGradienBorder(colors: [resonancePurple,resonanceOrange,resonancePink], width: 4, cornerRadius: 20)
-        testView.cornerRadius = 20
-        testText.font = UIFont(name: "ModernSansLight" , size: 20)
-        testText.font.withSize(20)
-        testText.sizeToFit()
+        doLayout()
     }
     
     func setupLocation(){
@@ -44,21 +38,18 @@ class MapViewController: UIViewController {
         setCircleLocation()
         
     }
-    
+    func doLayout(){
+        menuButton.imageEdgeInsets = UIEdgeInsets(top: 15,left: 15,bottom: 15,right: 15)
+        menuButton.cornerRadius = 27.5
+    }
     func setCircleLocation() {
         for i in 0...zoneManager.zones.count-1{
-            var circle = MKCircle()
-            circleLocation = CLLocationCoordinate2D(latitude: zoneManager.zones[i].latitude!, longitude: zoneManager.zones[i].longitude!)
-            let region = CLCircularRegion(center: circleLocation!, radius: zoneManager.zones[i].radius!, identifier: zoneManager.zones[i].zoneName!)
-            region.notifyOnEntry = true
-            region.notifyOnExit = true
+            let circle = shapeEngine.makeCircle(zone: zoneManager.zones[i])
             mapView.removeOverlays(mapView.overlays)
-            locationManager.startMonitoring(for: region)
-            
-            circle = MKCircle(center: circleLocation!, radius: region.radius)
         
             overlays.append(circle)
         }
+        print(overlays)
         mapView.addOverlays(overlays)
         let myAnnotation: MKPointAnnotation = MKPointAnnotation()
         myAnnotation.coordinate = CLLocationCoordinate2DMake(overlays[0].coordinate.latitude, overlays[0].coordinate.longitude);
@@ -66,6 +57,7 @@ class MapViewController: UIViewController {
         myAnnotation.title = zoneManager.zones[0].zoneName
         mapView.addAnnotation(myAnnotation)
     }
+    
     func setupDirections() {
         request.source =  MKMapItem(placemark: MKPlacemark(coordinate: (locationManager.location?.coordinate)!, addressDictionary: nil))
         request.destination = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: overlays[0].coordinate.latitude, longitude: overlays[0].coordinate.longitude), addressDictionary: nil))
@@ -96,6 +88,7 @@ extension MapViewController: CLLocationManagerDelegate{
     
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
         track.play(name: region.identifier)
+        print(region.identifier , " has been entered")
     }
     func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
         track.stop(name: region.identifier)
@@ -108,7 +101,6 @@ extension MapViewController: MKMapViewDelegate{
         if(overlay is MKCircle){
             let circleRenderer = MKCircleRenderer(circle: overlay as! MKCircle)
             circleRenderer.strokeColor = resonancePink
-            
             return circleRenderer
         }else if(overlay is MKPolyline){
             let renderer = MKPolylineRenderer(polyline: overlay as! MKPolyline)

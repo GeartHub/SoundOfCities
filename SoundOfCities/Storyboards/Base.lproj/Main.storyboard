@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KWv-MD-upp">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ModernSans-Light.otf">
+            <string>ModernSansLight</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Launch Screen View Controller-->
+        <scene sceneID="7dh-rp-mSN">
+            <objects>
+                <viewController id="KWv-MD-upp" customClass="LaunchScreenViewController" customModule="SoundOfCities" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FWo-Fz-D7j">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resonance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xOF-my-W4V">
+                                <rect key="frame" x="135" y="462" width="144" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line12" translatesAutoresizingMaskIntoConstraints="NO" id="fAH-dK-GSm">
+                                <rect key="frame" x="77" y="298" width="260" height="140"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xOF-my-W4V" firstAttribute="top" secondItem="fAH-dK-GSm" secondAttribute="bottom" constant="24" id="GwT-Xf-Eb6"/>
+                            <constraint firstItem="fAH-dK-GSm" firstAttribute="leading" secondItem="TjR-D9-IBa" secondAttribute="leading" constant="77" id="TKi-r9-QyN"/>
+                            <constraint firstItem="fAH-dK-GSm" firstAttribute="centerX" secondItem="xOF-my-W4V" secondAttribute="centerX" id="Tuf-Aa-5mp"/>
+                            <constraint firstItem="fAH-dK-GSm" firstAttribute="centerX" secondItem="FWo-Fz-D7j" secondAttribute="centerX" id="Vbp-31-qRm"/>
+                            <constraint firstItem="fAH-dK-GSm" firstAttribute="top" secondItem="TjR-D9-IBa" secondAttribute="top" constant="278" id="hov-D3-sh7"/>
+                            <constraint firstItem="fAH-dK-GSm" firstAttribute="centerY" secondItem="FWo-Fz-D7j" secondAttribute="centerY" id="yy8-wF-CDt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TjR-D9-IBa"/>
+                    </view>
+                    <connections>
+                        <outlet property="popImage" destination="fAH-dK-GSm" id="dkn-cs-PdZ"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="AfterLaunchSegue" id="OFv-jz-9vC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lXo-vf-Wwn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-558" y="27"/>
+        </scene>
+        <!--Introduction View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="IntroductionViewController" customModule="SoundOfCities" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JNS-EM-KBm">
+                                <rect key="frame" x="16" y="37" width="382" height="679"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Oa1-xt-jNL">
+                                        <rect key="frame" x="35" y="158" width="312" height="309"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text"> An application which gives you the experience of enhancing a city through music.
+
+The application gives you the choice of walking free or navigated throughout the city along soundscapes.
+
+Soundscapes are zones connected to tourist sights, which give impressions of the city within its history.</string>
+                                        <fontDescription key="fontDescription" name="ModernSansLight" family="Modern Sans" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resonance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9iI-AX-agY">
+                                        <rect key="frame" x="84" y="93" width="214" height="25"/>
+                                        <fontDescription key="fontDescription" name="ModernSansLight" family="Modern Sans" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Download the audio files and continue" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="84r-t3-RmD">
+                                        <rect key="frame" x="75" y="485" width="232" height="48"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="Lgf-gC-4HV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ModernSansLight" family="Modern Sans" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t4w-59-Mac" customClass="PinkRoundButton" customModule="SoundOfCities" customModuleProvider="target">
+                                        <rect key="frame" x="162" y="563" width="58" height="58"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="58" id="MBM-UR-03D"/>
+                                            <constraint firstAttribute="height" constant="58" id="ziI-mD-Mg1"/>
+                                        </constraints>
+                                        <state key="normal" image="download"/>
+                                        <connections>
+                                            <segue destination="mnh-I0-rwQ" kind="show" id="Pvx-PZ-p1O"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="84r-t3-RmD" firstAttribute="top" secondItem="Oa1-xt-jNL" secondAttribute="bottom" constant="18" id="0ia-lw-APQ"/>
+                                    <constraint firstItem="Oa1-xt-jNL" firstAttribute="leading" secondItem="JNS-EM-KBm" secondAttribute="leading" constant="35" id="8lI-Tf-o2W"/>
+                                    <constraint firstAttribute="bottom" secondItem="t4w-59-Mac" secondAttribute="bottom" constant="58" id="8s8-hP-acA"/>
+                                    <constraint firstItem="9iI-AX-agY" firstAttribute="top" secondItem="JNS-EM-KBm" secondAttribute="top" constant="93" id="ET4-7Z-cpf"/>
+                                    <constraint firstAttribute="trailing" secondItem="84r-t3-RmD" secondAttribute="trailing" constant="75" id="L4d-4R-kh6"/>
+                                    <constraint firstAttribute="trailing" secondItem="9iI-AX-agY" secondAttribute="trailing" constant="84" id="SH5-Ge-DQs"/>
+                                    <constraint firstItem="t4w-59-Mac" firstAttribute="centerX" secondItem="84r-t3-RmD" secondAttribute="centerX" id="SdG-M3-Z8p"/>
+                                    <constraint firstAttribute="trailing" secondItem="Oa1-xt-jNL" secondAttribute="trailing" constant="35" id="T9m-pg-Qfi"/>
+                                    <constraint firstItem="9iI-AX-agY" firstAttribute="leading" secondItem="JNS-EM-KBm" secondAttribute="leading" constant="84" id="Z5E-Tn-ZpL"/>
+                                    <constraint firstItem="Oa1-xt-jNL" firstAttribute="centerY" secondItem="JNS-EM-KBm" secondAttribute="centerY" constant="-27" id="a7R-CN-0zj"/>
+                                    <constraint firstItem="84r-t3-RmD" firstAttribute="leading" secondItem="JNS-EM-KBm" secondAttribute="leading" constant="75" id="cxS-uR-NcS"/>
+                                    <constraint firstItem="Oa1-xt-jNL" firstAttribute="centerX" secondItem="84r-t3-RmD" secondAttribute="centerX" id="ls4-Fk-xbn"/>
+                                    <constraint firstItem="Oa1-xt-jNL" firstAttribute="top" secondItem="9iI-AX-agY" secondAttribute="bottom" constant="40" id="ro8-Dz-KuO"/>
+                                    <constraint firstItem="t4w-59-Mac" firstAttribute="top" secondItem="84r-t3-RmD" secondAttribute="bottom" constant="30" id="zuQ-zS-b1l"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="35"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="2" height="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JNS-EM-KBm" secondAttribute="trailing" constant="16" id="5Ku-Yx-J1P"/>
+                            <constraint firstAttribute="bottom" secondItem="JNS-EM-KBm" secondAttribute="bottom" constant="20" symbolic="YES" id="8FO-jv-4QR"/>
+                            <constraint firstItem="JNS-EM-KBm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="17" id="Gs4-yk-Bea"/>
+                            <constraint firstItem="JNS-EM-KBm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Jee-ST-hhf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="nextButton" destination="t4w-59-Mac" id="JCb-sF-n3T"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="202.89855072463769" y="25.271739130434785"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="yog-Ev-bFp">
+            <objects>
+                <viewController id="mnh-I0-rwQ" customClass="MapViewController" customModule="SoundOfCities" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OOd-Ze-Hu7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vwx-ag-UBi">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1AD-jp-0wo">
+                                <rect key="frame" x="20" y="626" width="374" height="79"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mx9-aI-ndd">
+                                        <rect key="frame" x="232" y="11" width="55" height="55"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <inset key="imageEdgeInsets" minX="1" minY="1" maxX="0.0" maxY="1"/>
+                                        <state key="normal" backgroundImage="navigation"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VPa-oz-Lug">
+                                        <rect key="frame" x="74" y="6" width="65" height="65"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <inset key="imageEdgeInsets" minX="1" minY="1" maxX="0.0" maxY="1"/>
+                                        <state key="normal" backgroundImage="camera"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TuJ-dd-wtM">
+                                        <rect key="frame" x="0.0" y="6" width="66" height="66"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <inset key="imageEdgeInsets" minX="1" minY="1" maxX="0.0" maxY="1"/>
+                                        <state key="normal" backgroundImage="tracked"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lq1-qo-hqf">
+                                        <rect key="frame" x="160" y="11" width="55" height="55"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <inset key="imageEdgeInsets" minX="1" minY="1" maxX="0.0" maxY="1"/>
+                                        <state key="normal" backgroundImage="foot"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="center" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sb4-wc-wGN">
+                                        <rect key="frame" x="311" y="12" width="55" height="55"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="1" minY="1" maxX="0.0" maxY="1"/>
+                                        <state key="normal" image="menu"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1AD-jp-0wo" firstAttribute="top" secondItem="OOd-Ze-Hu7" secondAttribute="top" constant="626" id="3ya-t3-hNR"/>
+                            <constraint firstItem="Vn2-81-Yy9" firstAttribute="bottom" secondItem="1AD-jp-0wo" secondAttribute="bottom" constant="31" id="63k-nB-cYb"/>
+                            <constraint firstItem="Vn2-81-Yy9" firstAttribute="trailing" secondItem="1AD-jp-0wo" secondAttribute="trailing" constant="20" id="E7C-qf-zjd"/>
+                            <constraint firstItem="1AD-jp-0wo" firstAttribute="leading" secondItem="Vn2-81-Yy9" secondAttribute="leading" constant="20" id="NBy-Hi-Etj"/>
+                            <constraint firstItem="1AD-jp-0wo" firstAttribute="leading" secondItem="Vn2-81-Yy9" secondAttribute="leading" constant="20" id="S46-It-vhw"/>
+                            <constraint firstItem="vwx-ag-UBi" firstAttribute="bottom" secondItem="Vn2-81-Yy9" secondAttribute="bottom" id="XHf-Ho-yUG"/>
+                            <constraint firstItem="vwx-ag-UBi" firstAttribute="trailing" secondItem="Vn2-81-Yy9" secondAttribute="trailing" id="iWJ-Ks-KFb"/>
+                            <constraint firstItem="vwx-ag-UBi" firstAttribute="leading" secondItem="Vn2-81-Yy9" secondAttribute="leading" id="v0W-eH-y1W"/>
+                            <constraint firstItem="vwx-ag-UBi" firstAttribute="top" secondItem="OOd-Ze-Hu7" secondAttribute="top" id="xss-I6-UWs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Vn2-81-Yy9"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="vwx-ag-UBi" id="Vq8-AY-wqj"/>
+                        <outlet property="menuButton" destination="Sb4-wc-wGN" id="ZtW-hv-Q3P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iQ0-Oc-guG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1091.304347826087" y="26.90217391304348"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera" width="65" height="65"/>
+        <image name="download" width="32.666667938232422" height="32.666667938232422"/>
+        <image name="foot" width="65" height="65"/>
+        <image name="line12" width="224" height="64"/>
+        <image name="menu" width="65" height="45"/>
+        <image name="navigation" width="65" height="65"/>
+        <image name="tracked" width="66" height="66"/>
+    </resources>
+</document>
