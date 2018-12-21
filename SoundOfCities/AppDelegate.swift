@@ -11,14 +11,16 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    var locationManager = CLLocationManager()
+    
+    var viewController = MapViewController()
 
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        Styles.applyStyles()
+        
         // Override point for customization after application launch.
+        Styles.applyStyles()
         return true
     }
 
@@ -42,7 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-        locationManager.stopUpdatingLocation()
+        viewController.locationManager.stopUpdatingLocation()
     }
 
 

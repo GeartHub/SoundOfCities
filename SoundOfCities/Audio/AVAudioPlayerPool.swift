@@ -28,7 +28,6 @@ class AVAudioPlayerPool {
             activePlayers.append(newPlayer!)
             return newPlayer
         }catch let error{
-            print(error)
             fatalError("Newplayer could not be created")
         }
         

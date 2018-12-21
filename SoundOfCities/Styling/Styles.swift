@@ -7,12 +7,12 @@
 //
 
 import UIKit
+import CoreFoundation
 
 class Styles {
     static func applyStyles() {
         let filledPinkButton = PinkRoundButton.appearance()
         filledPinkButton.setTitleColor(UIColor.white, for: .normal)
-        filledPinkButton.backgroundColor = resonancePink
         filledPinkButton.cornerRadius = 10
         
         let closeButton = CloseButton.appearance()
@@ -22,9 +22,88 @@ class Styles {
     }
 }
 
-class PinkRoundButton: UIButton {}
+class PinkRoundButton: UIButton {
+    override func layoutSubviews() {
+        super.layoutSubviews()
+
+        let background = CAGradientLayer()
+        background.frame = self.bounds
+        background.colors = [resonanceOrange.cgColor, resonancePink.cgColor, resonancePurple.cgColor]
+        background.cornerRadius = 10
+        self.layer.insertSublayer(background, at: 0)
+    }
+}
 
 class CloseButton: UIButton{}
+
+enum MenuButtonType {
+    case navigation
+    case tracked
+    case camera
+    case hike
+    case menu
+    
+    static let images: [MenuButtonType: (UIImage)] =
+        [.navigation: UIImage(named: "navigation" )!,
+         .tracked: UIImage(named: "tracked")!,
+         .camera: UIImage(named: "camera")!,
+         .hike: UIImage(named: "hike")!,
+         .menu: UIImage(named: "menu")!
+    ]
+    static let insets: [MenuButtonType: (UIEdgeInsets)] =
+        [.navigation: UIEdgeInsets(top: 12, left: 17, bottom: 12, right: 17),
+         .menu: UIEdgeInsets(top: 20, left: 15, bottom: 20, right: 15),
+         .hike:UIEdgeInsets(top: 10, left: 15, bottom: 10, right: 10),
+         .tracked:UIEdgeInsets(top: 12, left: 5, bottom: 12, right: 5)
+            
+    ]
+    
+    var buttonImage: UIImage{
+        get{
+            if let image = MenuButtonType.images[self]{
+                return image
+            }else{
+                return UIImage(named: "placeholder")!
+            }
+        }
+    }
+    var edgeInsets: UIEdgeInsets{
+        get{
+            if let type = MenuButtonType.insets[self]{
+                return type
+            }
+            else{
+                return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+            }
+        }
+    }
+    var cornerRadius: CGFloat{
+        get{
+            return 30
+        }
+    }
+}
+
+class MenuButton: UIButton{
+    
+    init(type: MenuButtonType){
+        super.init(frame: CGRect.zero)
+        self.setImage(type.buttonImage, for: .normal)
+        self.translatesAutoresizingMaskIntoConstraints = false
+        self.backgroundColor = .white
+        self.cornerRadius = type.cornerRadius
+        self.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        self.imageEdgeInsets = type.edgeInsets
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowOffset = CGSize(width: 0, height: 5.0)
+        self.layer.shadowOpacity = 0.5
+        self.layer.shadowRadius = 4.0
+    }
+    
+    required public init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
 
 // WARNING: Breaks corner radius, no fix yet
 // Needs to be used to set background color for buttons with states
@@ -67,4 +146,3 @@ extension UIButton {
     }
 
 }
-

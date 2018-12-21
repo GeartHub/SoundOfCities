@@ -16,15 +16,15 @@ final class Zone{
     public var longitude: Double?
     public var radius: Double?
     public var zoneName: String?
-    
-    public var zones: [Zone] = []
+    public var hotspotName: String?
     
     private init() {}
     
     init(from: Package){
-        latitude = from.zone.latitude
-        longitude = from.zone.longitude
-        radius = from.zone.radius
-        zoneName = from.zone.zoneName
+        latitude = from.latitude
+        longitude = from.longitude
+        radius = from.radius
+        zoneName = from.zoneName
+        hotspotName = from.hotspotName
     }
 }

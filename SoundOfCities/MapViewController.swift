@@ -14,12 +14,16 @@ class MapViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     var locationManager = CLLocationManager()
     
-    @IBOutlet weak var menuButton: UIButton!
+    @IBOutlet weak var menuView: UIStackView!
+    let stackView = UIStackView()
+//    @IBOutlet weak var menuButton: UIButton!
     
+    var menuButton = MenuButton.self
     var circleLocation: CLLocationCoordinate2D?
     var track = Track()
     var zoneManager = ZoneManager.instance
     var overlays: [MKOverlay] = []
+    var annotationArray: [MKAnnotation] = []
     let request = MKDirections.Request()
     let shapeEngine = ShapeEngine()
     
@@ -28,34 +32,70 @@ class MapViewController: UIViewController {
         mapView.delegate = self
         setupLocation()
         doLayout()
+
+        
     }
-    
+ 
+
+    func doLayout(){
+        let safeArea = self.view.safeAreaLayoutGuide
+
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.axis = .horizontal
+        stackView.distribution = .fillEqually
+        stackView.alignment = .center
+        stackView.spacing = 20
+        view.addSubview(stackView)
+        
+        stackView.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor, constant: -20).isActive = true
+        stackView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 10).isActive = true
+        stackView.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -10).isActive = true
+        addButtons()
+        
+    }
+    func addButtons(){
+        
+        let menuButtonTypes: [MenuButtonType] = [.tracked, .camera, .hike, .navigation, .menu]
+        
+        for type in menuButtonTypes{
+            let button = MenuButton(type: type)
+            stackView.addArrangedSubview(button)
+        }
+        stackView.layoutIfNeeded()
+        stackView.spacing = 15
+        
+    }
     func setupLocation(){
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
-        setCircleLocation()
+        setCircleOnLocation()
+        
         
     }
-    func doLayout(){
-        menuButton.imageEdgeInsets = UIEdgeInsets(top: 15,left: 15,bottom: 15,right: 15)
-        menuButton.cornerRadius = 27.5
-    }
-    func setCircleLocation() {
+    func setCircleOnLocation() {
         for i in 0...zoneManager.zones.count-1{
             let circle = shapeEngine.makeCircle(zone: zoneManager.zones[i])
             mapView.removeOverlays(mapView.overlays)
         
             overlays.append(circle)
+            
+            let myAnnotation: MKPointAnnotation = MKPointAnnotation()
+            myAnnotation.coordinate = CLLocationCoordinate2DMake(overlays[i].coordinate.latitude, overlays[i].coordinate.longitude)
+            myAnnotation.title = zoneManager.zones[i].hotspotName
+            if annotationArray.count == 0{
+                annotationArray.append(myAnnotation)
+            }else if myAnnotation.title != zoneManager.zones[i-1].hotspotName{
+                annotationArray.append(myAnnotation)
+            }
+            
         }
-        print(overlays)
         mapView.addOverlays(overlays)
-        let myAnnotation: MKPointAnnotation = MKPointAnnotation()
-        myAnnotation.coordinate = CLLocationCoordinate2DMake(overlays[0].coordinate.latitude, overlays[0].coordinate.longitude);
-    
-        myAnnotation.title = zoneManager.zones[0].zoneName
-        mapView.addAnnotation(myAnnotation)
+        mapView.addAnnotations(annotationArray)
+        print(annotationArray.count)
+        
+       
     }
     
     func setupDirections() {
@@ -100,7 +140,7 @@ extension MapViewController: MKMapViewDelegate{
         
         if(overlay is MKCircle){
             let circleRenderer = MKCircleRenderer(circle: overlay as! MKCircle)
-            circleRenderer.strokeColor = resonancePink
+            circleRenderer.strokeColor  = resonancePink
             return circleRenderer
         }else if(overlay is MKPolyline){
             let renderer = MKPolylineRenderer(polyline: overlay as! MKPolyline)
@@ -131,26 +171,5 @@ extension MapViewController: MKMapViewDelegate{
         print(view.annotation?.title)
     }
 }
-extension CALayer {
-    func addGradienBorder(colors:[UIColor],width:CGFloat = 1, cornerRadius: CGFloat) {
-        let path = UIBezierPath(roundedRect: self.bounds.insetBy(dx: 1.5, dy: 1.5), byRoundingCorners: [.topLeft, .bottomLeft, .topRight, .bottomRight], cornerRadii: CGSize(width: cornerRadius, height:cornerRadius))
-        
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.frame =  CGRect(origin: CGPoint.zero, size: self.bounds.size)
-        gradientLayer.startPoint = CGPoint(x:0.0, y:0.5)
-        gradientLayer.endPoint = CGPoint(x: 1.0, y:0.5)
-        gradientLayer.colors = colors.map({$0.cgColor})
-        
-        let shapeLayer = CAShapeLayer()
-        shapeLayer.lineWidth = width
-        shapeLayer.cornerRadius = cornerRadius
-        shapeLayer.path = path.cgPath
-        shapeLayer.fillColor = nil
-        shapeLayer.strokeColor = UIColor.black.cgColor
-        gradientLayer.mask = shapeLayer
-        
-        
-        self.insertSublayer(gradientLayer, at: 0)
-    }
-}
+
 

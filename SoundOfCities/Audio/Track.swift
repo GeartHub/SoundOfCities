@@ -20,13 +20,11 @@ class Track: NSObject{
         // wait till other is done
     
         let urlPath = Bundle.main.path(forResource: name, ofType: "mp3")
-        print("urlPath: ", urlPath)
+
         let fileURL = URL(fileURLWithPath: urlPath!)
-        print("fileURL: ", fileURL)
         let somePlayer = playerPool.playerWithURL(url: fileURL)
         somePlayer?.prepareToPlay()
         somePlayer?.volume = 0
-        print(playerPool.activePlayers[0].isPlaying, " ", playerPool.activePlayers[0].currentTime)
         if playerPool.activePlayers[0].isPlaying{
             somePlayer?.currentTime = playerPool.activePlayers[0].currentTime
         }
