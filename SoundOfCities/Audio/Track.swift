@@ -16,11 +16,8 @@ class Track: NSObject{
     var isPlaying: Bool?
     
     func play(name: String){
-        // check if something is playing
-        // wait till other is done
     
         let urlPath = Bundle.main.path(forResource: name, ofType: "mp3")
-
         let fileURL = URL(fileURLWithPath: urlPath!)
         let somePlayer = playerPool.playerWithURL(url: fileURL)
         somePlayer?.prepareToPlay()

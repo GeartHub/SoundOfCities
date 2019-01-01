@@ -81,21 +81,18 @@ class MapViewController: UIViewController {
         
             overlays.append(circle)
             
-            let myAnnotation: MKPointAnnotation = MKPointAnnotation()
-            myAnnotation.coordinate = CLLocationCoordinate2DMake(overlays[i].coordinate.latitude, overlays[i].coordinate.longitude)
-            myAnnotation.title = zoneManager.zones[i].hotspotName
-            if annotationArray.count == 0{
-                annotationArray.append(myAnnotation)
-            }else if myAnnotation.title != zoneManager.zones[i-1].hotspotName{
-                annotationArray.append(myAnnotation)
-            }
             
+            
+        }
+        for hotspot in zoneManager.hotspots{
+            let myAnnotation: MKPointAnnotation = MKPointAnnotation()
+            
+            myAnnotation.title = hotspot.name
+            myAnnotation.coordinate = hotspot.location!
+            annotationArray.append(myAnnotation)
         }
         mapView.addOverlays(overlays)
         mapView.addAnnotations(annotationArray)
-        print(annotationArray.count)
-        
-       
     }
     
     func setupDirections() {
@@ -112,6 +109,11 @@ class MapViewController: UIViewController {
                 self.mapView.addOverlay(route.polyline)
                 self.mapView.setVisibleMapRect(route.polyline.boundingMapRect, animated: true)
             }
+        }
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "HotspotInformationScreen", let destination = segue.destination as? HotspotInformationScreenViewController{
+            destination.hotspot = sender as! Hotspot
         }
     }
 }
@@ -168,7 +170,7 @@ extension MapViewController: MKMapViewDelegate{
         return anView
     }
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-        print(view.annotation?.title)
+        performSegue(withIdentifier: "HotspotInformationScreen", sender: zoneManager.find(with: ((view.annotation?.title!)!)))
     }
 }
 

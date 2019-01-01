@@ -176,11 +176,88 @@ Soundscapes are zones connected to tourist sights, which give impressions of the
                     </view>
                     <connections>
                         <outlet property="mapView" destination="vwx-ag-UBi" id="Vq8-AY-wqj"/>
+                        <segue destination="h88-RI-fhg" kind="show" identifier="HotspotInformationScreen" id="kd1-Le-MK6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iQ0-Oc-guG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1091.304347826087" y="26.90217391304348"/>
+            <point key="canvasLocation" x="1141" y="124"/>
+        </scene>
+        <!--Hotspot Information Screen View Controller-->
+        <scene sceneID="hwM-PC-w6D">
+            <objects>
+                <viewController id="h88-RI-fhg" customClass="HotspotInformationScreenViewController" customModule="SoundOfCities" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Va7-o6-2OD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AnS-dc-Yg4">
+                                <rect key="frame" x="16" y="37" width="382" height="679"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZy-2T-xcK">
+                                        <rect key="frame" x="35" y="155" width="312" height="315"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text"> An application which gives you the experience of enhancing a city through music.
+
+The application gives you the choice of walking free or navigated throughout the city along soundscapes.
+
+Soundscapes are zones connected to tourist sights, which give impressions of the city within its history.</string>
+                                        <fontDescription key="fontDescription" name="ModernSansLight" family="Modern Sans" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hotspot name label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tNf-2N-x8Z">
+                                        <rect key="frame" x="84" y="93" width="214" height="22"/>
+                                        <fontDescription key="fontDescription" name="ModernSansLight" family="Modern Sans" pointSize="23"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="TZy-2T-xcK" firstAttribute="top" secondItem="tNf-2N-x8Z" secondAttribute="bottom" constant="40" id="EXl-XG-xa8"/>
+                                    <constraint firstItem="tNf-2N-x8Z" firstAttribute="leading" secondItem="AnS-dc-Yg4" secondAttribute="leading" constant="84" id="HCC-QJ-1M9"/>
+                                    <constraint firstItem="tNf-2N-x8Z" firstAttribute="top" secondItem="AnS-dc-Yg4" secondAttribute="top" constant="93" id="OMk-4C-CEr"/>
+                                    <constraint firstItem="TZy-2T-xcK" firstAttribute="leading" secondItem="AnS-dc-Yg4" secondAttribute="leading" constant="35" id="Sdi-Ko-8zT"/>
+                                    <constraint firstAttribute="trailing" secondItem="TZy-2T-xcK" secondAttribute="trailing" constant="35" id="XuH-gw-tzs"/>
+                                    <constraint firstItem="TZy-2T-xcK" firstAttribute="centerY" secondItem="AnS-dc-Yg4" secondAttribute="centerY" constant="-27" id="esy-0V-8jS"/>
+                                    <constraint firstAttribute="trailing" secondItem="tNf-2N-x8Z" secondAttribute="trailing" constant="84" id="pNE-Ig-D3y"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="35"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="2" height="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="AnS-dc-Yg4" firstAttribute="top" secondItem="3rN-ZM-hMK" secondAttribute="top" constant="17" id="6Ik-hC-IbV"/>
+                            <constraint firstAttribute="bottom" secondItem="AnS-dc-Yg4" secondAttribute="bottom" constant="20" symbolic="YES" id="DO4-fl-adL"/>
+                            <constraint firstItem="AnS-dc-Yg4" firstAttribute="leading" secondItem="3rN-ZM-hMK" secondAttribute="leading" constant="16" id="TvI-6J-f2s"/>
+                            <constraint firstItem="3rN-ZM-hMK" firstAttribute="trailing" secondItem="AnS-dc-Yg4" secondAttribute="trailing" constant="16" id="x03-GT-Wy0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3rN-ZM-hMK"/>
+                    </view>
+                    <connections>
+                        <outlet property="hotSpotInformationTextView" destination="TZy-2T-xcK" id="Jfo-uv-MV6"/>
+                        <outlet property="hotspotNameLabel" destination="tNf-2N-x8Z" id="tnF-wT-LmG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1y9-JY-e8S" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="203" y="743"/>
         </scene>
     </scenes>
     <resources>

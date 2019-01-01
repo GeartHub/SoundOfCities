@@ -16,7 +16,6 @@ final class Zone{
     public var longitude: Double?
     public var radius: Double?
     public var zoneName: String?
-    public var hotspotName: String?
     
     private init() {}
     
@@ -25,6 +24,5 @@ final class Zone{
         longitude = from.longitude
         radius = from.radius
         zoneName = from.zoneName
-        hotspotName = from.hotspotName
     }
 }

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		DA10F971219DD5E9001F6AD7 /* ZoneManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA10F970219DD5E9001F6AD7 /* ZoneManager.swift */; };
-		DA10F975219DDAC0001F6AD7 /* AudioEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA10F974219DDAC0001F6AD7 /* AudioEngine.swift */; };
 		DA6C293921A4B01D00976470 /* arpeggio_100.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DA6C293721A4AFAC00976470 /* arpeggio_100.mp3 */; };
 		DA6F4D6A21C9201500B82BD9 /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6F4D6921C9201500B82BD9 /* IntroductionViewController.swift */; };
 		DA6F4D7521C9217A00B82BD9 /* UIFont+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6F4D7121C9217900B82BD9 /* UIFont+Additions.swift */; };
@@ -18,6 +17,8 @@
 		DA7719DF21A2E190009C0F62 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7719DE21A2E190009C0F62 /* LaunchScreenViewController.swift */; };
 		DA7719E121A2F821009C0F62 /* AVAudioPlayerPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7719E021A2F821009C0F62 /* AVAudioPlayerPool.swift */; };
 		DA7719E321A303F1009C0F62 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7719E221A303F1009C0F62 /* Track.swift */; };
+		DA79286C21D67C270071CEF4 /* HotspotInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA79286B21D67C270071CEF4 /* HotspotInformationViewController.swift */; };
+		DA79287121D684ED0071CEF4 /* Hotspot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA79287021D684EC0071CEF4 /* Hotspot.swift */; };
 		DA81ABC621B530190007843E /* Zone.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA81ABC521B530190007843E /* Zone.swift */; };
 		DA81ABC821B537550007843E /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA81ABC721B537550007843E /* Package.swift */; };
 		DAA59B3321C28D5700EF31C3 /* electric_guitar.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DAA59B2F21C28D5600EF31C3 /* electric_guitar.mp3 */; };
@@ -63,7 +64,6 @@
 
 /* Begin PBXFileReference section */
 		DA10F970219DD5E9001F6AD7 /* ZoneManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoneManager.swift; sourceTree = "<group>"; };
-		DA10F974219DDAC0001F6AD7 /* AudioEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioEngine.swift; sourceTree = "<group>"; };
 		DA6C293721A4AFAC00976470 /* arpeggio_100.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = arpeggio_100.mp3; sourceTree = "<group>"; };
 		DA6F4D6921C9201500B82BD9 /* IntroductionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
 		DA6F4D7121C9217900B82BD9 /* UIFont+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Additions.swift"; sourceTree = "<group>"; };
@@ -73,6 +73,8 @@
 		DA7719DE21A2E190009C0F62 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		DA7719E021A2F821009C0F62 /* AVAudioPlayerPool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVAudioPlayerPool.swift; sourceTree = "<group>"; };
 		DA7719E221A303F1009C0F62 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		DA79286B21D67C270071CEF4 /* HotspotInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotspotInformationViewController.swift; sourceTree = "<group>"; };
+		DA79287021D684EC0071CEF4 /* Hotspot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hotspot.swift; sourceTree = "<group>"; };
 		DA81ABC521B530190007843E /* Zone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zone.swift; sourceTree = "<group>"; };
 		DA81ABC721B537550007843E /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		DAA59B2F21C28D5600EF31C3 /* electric_guitar.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = electric_guitar.mp3; sourceTree = "<group>"; };
@@ -141,6 +143,14 @@
 			path = Styling;
 			sourceTree = "<group>";
 		};
+		DA79286D21D67E040071CEF4 /* Hotspot */ = {
+			isa = PBXGroup;
+			children = (
+				DA79287021D684EC0071CEF4 /* Hotspot.swift */,
+			);
+			path = Hotspot;
+			sourceTree = "<group>";
+		};
 		DAA8BCF021C7D1BF004C1E07 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,7 +184,6 @@
 			children = (
 				DA7719E221A303F1009C0F62 /* Track.swift */,
 				DA7719E021A2F821009C0F62 /* AVAudioPlayerPool.swift */,
-				DA10F974219DDAC0001F6AD7 /* AudioEngine.swift */,
 				DAD7BBA021946C2B00BEF33F /* brass_100.mp3 */,
 				DAD7BBA121946C2B00BEF33F /* percussion_100_1.mp3 */,
 				DA6C293721A4AFAC00976470 /* arpeggio_100.mp3 */,
@@ -216,6 +225,7 @@
 		DADE6D3821945A3300B896CA /* SoundOfCities */ = {
 			isa = PBXGroup;
 			children = (
+				DA79286D21D67E040071CEF4 /* Hotspot */,
 				DAD7BB9F21946BF600BEF33F /* Audio */,
 				DABBCB2D21C8E01F00B8BA7D /* Zoning */,
 				DA6F4D7021C9210F00B82BD9 /* Styling */,
@@ -223,6 +233,7 @@
 				DAA8BCF021C7D1BF004C1E07 /* Fonts */,
 				DADE6D3921945A3300B896CA /* AppDelegate.swift */,
 				DAF71D5B219B706900530C81 /* MapViewController.swift */,
+				DA79286B21D67C270071CEF4 /* HotspotInformationViewController.swift */,
 				DA6F4D6921C9201500B82BD9 /* IntroductionViewController.swift */,
 				DADE6D4021945A3500B896CA /* Assets.xcassets */,
 				DADE6D4521945A3500B896CA /* Info.plist */,
@@ -401,12 +412,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA6F4D6A21C9201500B82BD9 /* IntroductionViewController.swift in Sources */,
-				DA10F975219DDAC0001F6AD7 /* AudioEngine.swift in Sources */,
+				DA79287121D684ED0071CEF4 /* Hotspot.swift in Sources */,
 				DA6F4D7721C9217A00B82BD9 /* StyleStuff.swift in Sources */,
 				DA7719E121A2F821009C0F62 /* AVAudioPlayerPool.swift in Sources */,
 				DAF71D5C219B706900530C81 /* MapViewController.swift in Sources */,
 				DA6F4D7521C9217A00B82BD9 /* UIFont+Additions.swift in Sources */,
 				DA6F4D7821C9217A00B82BD9 /* Styles.swift in Sources */,
+				DA79286C21D67C270071CEF4 /* HotspotInformationViewController.swift in Sources */,
 				DADE6D3A21945A3300B896CA /* AppDelegate.swift in Sources */,
 				DA7719E321A303F1009C0F62 /* Track.swift in Sources */,
 				DABBCB2C21C8523500B8BA7D /* ShapeEngine.swift in Sources */,

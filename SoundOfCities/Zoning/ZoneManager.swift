@@ -11,11 +11,15 @@ import CoreLocation
 import MapKit
 
 class ZoneManager{
-    var lastZoneName: String = ""
-    var circle = MKCircle()
-    
     var zones: [Zone] = []
+    var hotspots: [Hotspot] = []
     
     static let instance: ZoneManager = ZoneManager()
-
+    
+    func find(with hotspotName: String)->Hotspot?{
+        if let hotspot = hotspots.first(where: {$0.name  == hotspotName}){
+            return hotspot
+        }
+        return nil
+    }
 }
