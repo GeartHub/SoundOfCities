@@ -22,7 +22,6 @@ class SoundOfCitiesTests: XCTestCase {
     }
     
     func testZones(){
-        XCTAssertEqual(package.zones.count, 5)
     }
 
     func testExample() {

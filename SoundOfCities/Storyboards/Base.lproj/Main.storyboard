@@ -43,7 +43,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lXo-vf-Wwn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-558" y="27"/>
+            <point key="canvasLocation" x="-1233" y="24"/>
         </scene>
         <!--Introduction View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -91,7 +91,7 @@ Soundscapes are zones connected to tourist sights, which give impressions of the
                                         </constraints>
                                         <state key="normal" image="download"/>
                                         <connections>
-                                            <segue destination="mnh-I0-rwQ" kind="show" id="4KX-XY-p51"/>
+                                            <segue destination="5xR-td-7YQ" kind="show" id="4KX-XY-p51"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -146,12 +146,12 @@ Soundscapes are zones connected to tourist sights, which give impressions of the
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="202.89855072463769" y="25.271739130434785"/>
+            <point key="canvasLocation" x="-183" y="24"/>
         </scene>
-        <!--Map View Controller-->
+        <!--Resonance-->
         <scene sceneID="yog-Ev-bFp">
             <objects>
-                <viewController id="mnh-I0-rwQ" customClass="MapViewController" customModule="SoundOfCities" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyViewController" id="mnh-I0-rwQ" customClass="MapViewController" customModule="SoundOfCities" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OOd-Ze-Hu7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -174,6 +174,7 @@ Soundscapes are zones connected to tourist sights, which give impressions of the
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Vn2-81-Yy9"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Resonance" id="3ke-7I-da1"/>
                     <connections>
                         <outlet property="mapView" destination="vwx-ag-UBi" id="Vq8-AY-wqj"/>
                         <segue destination="h88-RI-fhg" kind="show" identifier="HotspotInformationScreen" id="kd1-Le-MK6"/>
@@ -181,7 +182,7 @@ Soundscapes are zones connected to tourist sights, which give impressions of the
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iQ0-Oc-guG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1141" y="124"/>
+            <point key="canvasLocation" x="1612" y="24"/>
         </scene>
         <!--Hotspot Information Screen View Controller-->
         <scene sceneID="hwM-PC-w6D">
@@ -192,10 +193,10 @@ Soundscapes are zones connected to tourist sights, which give impressions of the
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AnS-dc-Yg4">
-                                <rect key="frame" x="16" y="37" width="382" height="679"/>
+                                <rect key="frame" x="16" y="81" width="382" height="635"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZy-2T-xcK">
-                                        <rect key="frame" x="35" y="155" width="312" height="315"/>
+                                        <rect key="frame" x="35" y="155" width="312" height="271"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <string key="text"> An application which gives you the experience of enhancing a city through music.
 
@@ -258,6 +259,27 @@ Soundscapes are zones connected to tourist sights, which give impressions of the
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1y9-JY-e8S" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="203" y="743"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BcC-UK-AEb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5xR-td-7YQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="etY-rJ-lHH">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pOB-Fs-XPE">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="mnh-I0-rwQ" kind="relationship" relationship="rootViewController" id="sXv-jO-LIN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xg4-97-0VW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="732" y="24"/>
         </scene>
     </scenes>
     <resources>

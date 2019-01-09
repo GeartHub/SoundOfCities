@@ -14,7 +14,7 @@ class IntroductionViewController: UIViewController {
     
     @IBOutlet weak var nextButton: UIButton!
     var track = Track()
-    var playerPool = AVAudioPlayerPool()
+    var playerPool = AVAudioPlayerPool.instance
     var package = Package()
     var zoneManager = ZoneManager.instance
     

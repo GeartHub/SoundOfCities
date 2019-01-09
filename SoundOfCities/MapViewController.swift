@@ -26,13 +26,13 @@ class MapViewController: UIViewController {
     var annotationArray: [MKAnnotation] = []
     let request = MKDirections.Request()
     let shapeEngine = ShapeEngine()
+    let playerPool = AVAudioPlayerPool.instance
     
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
         setupLocation()
         doLayout()
-
         
     }
  
@@ -86,7 +86,6 @@ class MapViewController: UIViewController {
         }
         for hotspot in zoneManager.hotspots{
             let myAnnotation: MKPointAnnotation = MKPointAnnotation()
-            
             myAnnotation.title = hotspot.name
             myAnnotation.coordinate = hotspot.location!
             annotationArray.append(myAnnotation)
@@ -125,7 +124,6 @@ extension MapViewController: CLLocationManagerDelegate{
             let viewRegion = MKCoordinateRegion(center: center, latitudinalMeters: 1000, longitudinalMeters: 1000)
             self.mapView.setRegion(viewRegion, animated: true)
         }
-        
     }
     
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {

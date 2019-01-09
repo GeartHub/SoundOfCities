@@ -9,6 +9,11 @@ import AVFoundation
 
 
 class AVAudioPlayerPool {
+    
+    static let instance: AVAudioPlayerPool = AVAudioPlayerPool()
+    
+    private init(){}
+    
     var activePlayers : [AVAudioPlayer] = []
 
     // Given the URL of a sound file, either create or reuse an audio player
@@ -30,6 +35,10 @@ class AVAudioPlayerPool {
         }catch let error{
             fatalError("Newplayer could not be created")
         }
-        
+    }
+    func setInactive(player: AVAudioPlayer){
+        let index = activePlayers.index(of: player)!
+        var blabla = activePlayers.first {$0.url?.absoluteString == player.url?.absoluteString}
+//        activePlayers.remove(at: index)
     }
 }

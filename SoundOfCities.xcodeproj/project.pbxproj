@@ -21,6 +21,7 @@
 		DA79287121D684ED0071CEF4 /* Hotspot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA79287021D684EC0071CEF4 /* Hotspot.swift */; };
 		DA81ABC621B530190007843E /* Zone.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA81ABC521B530190007843E /* Zone.swift */; };
 		DA81ABC821B537550007843E /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA81ABC721B537550007843E /* Package.swift */; };
+		DA82039521E5FA5B00EDB6B2 /* LoadFromPlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA82039421E5FA5B00EDB6B2 /* LoadFromPlist.swift */; };
 		DAA59B3321C28D5700EF31C3 /* electric_guitar.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DAA59B2F21C28D5600EF31C3 /* electric_guitar.mp3 */; };
 		DAA59B3421C28D5700EF31C3 /* acoustic_guitar.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DAA59B3021C28D5600EF31C3 /* acoustic_guitar.mp3 */; };
 		DAA59B3521C28D5700EF31C3 /* strings.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DAA59B3121C28D5600EF31C3 /* strings.mp3 */; };
@@ -32,6 +33,7 @@
 		DAA59B4021C28D7400EF31C3 /* sub_loop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DAA59B3B21C28D7400EF31C3 /* sub_loop.mp3 */; };
 		DAA59B4421C3CA4E00EF31C3 /* ModernSans-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = DAA59B4321C3C9EF00EF31C3 /* ModernSans-Light.otf */; };
 		DABBCB2C21C8523500B8BA7D /* ShapeEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABBCB2B21C8523500B8BA7D /* ShapeEngine.swift */; };
+		DAC7099621E29BCE000024F1 /* Package.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAC7099521E29BCE000024F1 /* Package.plist */; };
 		DAD7BBA521946C2B00BEF33F /* brass_100.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DAD7BBA021946C2B00BEF33F /* brass_100.mp3 */; };
 		DAD7BBA621946C2B00BEF33F /* percussion_100_1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DAD7BBA121946C2B00BEF33F /* percussion_100_1.mp3 */; };
 		DAD7BBA721946C2B00BEF33F /* percussion_100_2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DAD7BBA221946C2B00BEF33F /* percussion_100_2.mp3 */; };
@@ -77,6 +79,7 @@
 		DA79287021D684EC0071CEF4 /* Hotspot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hotspot.swift; sourceTree = "<group>"; };
 		DA81ABC521B530190007843E /* Zone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zone.swift; sourceTree = "<group>"; };
 		DA81ABC721B537550007843E /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		DA82039421E5FA5B00EDB6B2 /* LoadFromPlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFromPlist.swift; sourceTree = "<group>"; };
 		DAA59B2F21C28D5600EF31C3 /* electric_guitar.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = electric_guitar.mp3; sourceTree = "<group>"; };
 		DAA59B3021C28D5600EF31C3 /* acoustic_guitar.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = acoustic_guitar.mp3; sourceTree = "<group>"; };
 		DAA59B3121C28D5600EF31C3 /* strings.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = strings.mp3; sourceTree = "<group>"; };
@@ -88,6 +91,7 @@
 		DAA59B3B21C28D7400EF31C3 /* sub_loop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sub_loop.mp3; sourceTree = "<group>"; };
 		DAA59B4321C3C9EF00EF31C3 /* ModernSans-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ModernSans-Light.otf"; sourceTree = "<group>"; };
 		DABBCB2B21C8523500B8BA7D /* ShapeEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeEngine.swift; sourceTree = "<group>"; };
+		DAC7099521E29BCE000024F1 /* Package.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Package.plist; sourceTree = "<group>"; };
 		DAD7BBA021946C2B00BEF33F /* brass_100.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = brass_100.mp3; sourceTree = "<group>"; };
 		DAD7BBA121946C2B00BEF33F /* percussion_100_1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = percussion_100_1.mp3; sourceTree = "<group>"; };
 		DAD7BBA221946C2B00BEF33F /* percussion_100_2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = percussion_100_2.mp3; sourceTree = "<group>"; };
@@ -166,6 +170,7 @@
 				DABBCB2B21C8523500B8BA7D /* ShapeEngine.swift */,
 				DA81ABC521B530190007843E /* Zone.swift */,
 				DA81ABC721B537550007843E /* Package.swift */,
+				DA82039421E5FA5B00EDB6B2 /* LoadFromPlist.swift */,
 			);
 			path = Zoning;
 			sourceTree = "<group>";
@@ -238,6 +243,7 @@
 				DADE6D4021945A3500B896CA /* Assets.xcassets */,
 				DADE6D4521945A3500B896CA /* Info.plist */,
 				DA7719DE21A2E190009C0F62 /* LaunchScreenViewController.swift */,
+				DAC7099521E29BCE000024F1 /* Package.plist */,
 			);
 			path = SoundOfCities;
 			sourceTree = "<group>";
@@ -369,6 +375,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAC7099621E29BCE000024F1 /* Package.plist in Resources */,
 				DAA59B4421C3CA4E00EF31C3 /* ModernSans-Light.otf in Resources */,
 				DAA59B3F21C28D7400EF31C3 /* synths_loop.mp3 in Resources */,
 				DA6C293921A4B01D00976470 /* arpeggio_100.mp3 in Resources */,
@@ -411,6 +418,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA82039521E5FA5B00EDB6B2 /* LoadFromPlist.swift in Sources */,
 				DA6F4D6A21C9201500B82BD9 /* IntroductionViewController.swift in Sources */,
 				DA79287121D684ED0071CEF4 /* Hotspot.swift in Sources */,
 				DA6F4D7721C9217A00B82BD9 /* StyleStuff.swift in Sources */,

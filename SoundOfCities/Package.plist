@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>hotspots</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>NHL-Stenden Hogeschool</string>
+			<key>description</key>
+			<string>NHL Stenden Hogeschool is a educational institution with campuses all around the world.</string>
+			<key>latitude</key>
+			<string>53.208492</string>
+			<key>longitude</key>
+			<string>5.794702</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Oldehove</string>
+			<key>description</key>
+			<string>The Oldehove is a leaning and unfinished church tower in the medieval centre of the Dutch city of Leeuwarden.</string>
+			<key>latitude</key>
+			<string>53.202952</string>
+			<key>longitude</key>
+			<string>5.790562</string>
+		</dict>
+	</array>
+	<key>zones</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>synths_loop</string>
+			<key>latitude</key>
+			<string>53.208492</string>
+			<key>longitude</key>
+			<string>5.794702</string>
+			<key>radius</key>
+			<string>150</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>fx_loop</string>
+			<key>latitude</key>
+			<string>53.208492</string>
+			<key>longitude</key>
+			<string>5.794702</string>
+			<key>radius</key>
+			<string>250</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>strings_loop</string>
+			<key>latitude</key>
+			<string>53.208492</string>
+			<key>longitude</key>
+			<string>5.794702</string>
+			<key>radius</key>
+			<string>350</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>sub_loop</string>
+			<key>latitude</key>
+			<string>53.208492</string>
+			<key>longitude</key>
+			<string>5.794702</string>
+			<key>radius</key>
+			<string>450</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>drums_loop</string>
+			<key>latitude</key>
+			<string>53.208492</string>
+			<key>longitude</key>
+			<string>5.794702</string>
+			<key>radius</key>
+			<string>550</string>
+		</dict>
+	</array>
+</dict>
+</plist>
