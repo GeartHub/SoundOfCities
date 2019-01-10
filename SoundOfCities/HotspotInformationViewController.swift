@@ -10,17 +10,23 @@ import Foundation
 import UIKit
 
 class HotspotInformationScreenViewController: UIViewController{
-    @IBOutlet weak var hotSpotInformationTextView: UITextView!
+    @IBOutlet weak var hotSpotHistoryInformationTextView: UITextView!
+    @IBOutlet weak var hotSpotMusicInformationTextView: UITextView!
+    @IBOutlet weak var hotSpotActivityInformationTextView: UITextView!
+    
     @IBOutlet weak var hotspotNameLabel: UILabel!
+    
+    var navigationButton = UIButton()
     
     var hotspot: Hotspot?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+    
         hotspotNameLabel.text = hotspot?.name
         hotspotNameLabel.adjustsFontSizeToFitWidth = true
-        hotSpotInformationTextView.text = hotspot?.information
+        hotSpotHistoryInformationTextView.text = hotspot?.historyInformation
+        hotSpotMusicInformationTextView.text = hotspot?.musicInformation
+        hotSpotActivityInformationTextView.text = hotspot?.activityInformation
     }
 }

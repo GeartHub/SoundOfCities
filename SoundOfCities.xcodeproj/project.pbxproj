@@ -171,6 +171,7 @@
 				DA81ABC521B530190007843E /* Zone.swift */,
 				DA81ABC721B537550007843E /* Package.swift */,
 				DA82039421E5FA5B00EDB6B2 /* LoadFromPlist.swift */,
+				DAC7099521E29BCE000024F1 /* Package.plist */,
 			);
 			path = Zoning;
 			sourceTree = "<group>";
@@ -243,7 +244,6 @@
 				DADE6D4021945A3500B896CA /* Assets.xcassets */,
 				DADE6D4521945A3500B896CA /* Info.plist */,
 				DA7719DE21A2E190009C0F62 /* LaunchScreenViewController.swift */,
-				DAC7099521E29BCE000024F1 /* Package.plist */,
 			);
 			path = SoundOfCities;
 			sourceTree = "<group>";

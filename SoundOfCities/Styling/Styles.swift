@@ -15,10 +15,10 @@ class Styles {
         filledPinkButton.setTitleColor(UIColor.white, for: .normal)
         filledPinkButton.cornerRadius = 10
         
-        let closeButton = CloseButton.appearance()
-        closeButton.setTitleColor(UIColor.white, for: .normal)
-        closeButton.backgroundColor = resonancePink
-        closeButton.cornerRadius = 15
+        let whiteButtonWithPicture = RoundButtonWithPictore.appearance()
+        whiteButtonWithPicture.backgroundColor = .white
+        whiteButtonWithPicture.imageEdgeInsets = UIEdgeInsets(top: 12, left: 17, bottom: 12, right: 17)
+        whiteButtonWithPicture.cornerRadius = 27
     }
 }
 
@@ -31,6 +31,17 @@ class PinkRoundButton: UIButton {
         background.colors = [resonanceOrange.cgColor, resonancePink.cgColor, resonancePurple.cgColor]
         background.cornerRadius = 10
         self.layer.insertSublayer(background, at: 0)
+    }
+}
+
+class RoundButtonWithPictore: UIButton {
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowOffset = CGSize(width: 0, height: 5.0)
+        self.layer.shadowOpacity = 0.5
+        self.layer.shadowRadius = 4.0
     }
 }
 

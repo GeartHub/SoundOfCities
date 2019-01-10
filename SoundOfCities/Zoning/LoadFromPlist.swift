@@ -17,13 +17,16 @@ struct Root: Decodable{
 
 struct hotspot: Decodable {
     private enum CodingKeys: String, CodingKey {
-        case name, description, latitude, longitude
+        case name, historyDescription, musicDescription, activityDescription, latitude, longitude
     }
     
     let name: String
-    let description: String
+    let historyDescription: String
+    let musicDescription: String
+    let activityDescription: String
     let latitude: String
     let longitude: String
+    
 }
 
 struct zones: Decodable {

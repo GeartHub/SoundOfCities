@@ -7,8 +7,12 @@
 		<dict>
 			<key>name</key>
 			<string>NHL-Stenden Hogeschool</string>
-			<key>description</key>
+			<key>historyDescription</key>
 			<string>NHL Stenden Hogeschool is a educational institution with campuses all around the world.</string>
+            <key>musicDescription</key>
+            <string>This is where the music information should be.</string>
+            <key>activityDescription</key>
+            <string>This is where the activity information should be.</string>
 			<key>latitude</key>
 			<string>53.208492</string>
 			<key>longitude</key>
@@ -17,8 +21,12 @@
 		<dict>
 			<key>name</key>
 			<string>Oldehove</string>
-			<key>description</key>
+			<key>historyDescription</key>
 			<string>The Oldehove is a leaning and unfinished church tower in the medieval centre of the Dutch city of Leeuwarden.</string>
+			<key>musicDescription</key>
+			<string>This is where the music information should be.</string>
+			<key>activityDescription</key>
+			<string>This is where the activity information should be.</string>
 			<key>latitude</key>
 			<string>53.202952</string>
 			<key>longitude</key>

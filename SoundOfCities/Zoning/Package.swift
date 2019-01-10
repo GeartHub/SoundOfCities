@@ -9,8 +9,6 @@
 import Foundation
 import CoreLocation
 
-
-
 class Package {
     
     var zoneManager = ZoneManager.instance
@@ -23,7 +21,9 @@ class Package {
     
     
     var hotspotName: String?
-    var hotspotInformation: String?
+    var hotspotHistoryInformation: String?
+    var hotspotMusicInformation: String?
+    var hotspotActivityInformation: String?
     var hotspotLocation: CLLocationCoordinate2D?
 
     func functionsStruct() -> Root {
@@ -39,7 +39,9 @@ class Package {
         let newTestPackage = Package()
         for i in 0...information.hotspots.count-1{
             newTestPackage.hotspotName = information.hotspots[i].name
-            newTestPackage.hotspotInformation = information.hotspots[i].description
+            newTestPackage.hotspotHistoryInformation = information.hotspots[i].historyDescription
+            newTestPackage.hotspotMusicInformation = information.hotspots[i].musicDescription
+            newTestPackage.hotspotActivityInformation = information.hotspots[i].activityDescription
             newTestPackage.hotspotLocation = CLLocationCoordinate2D(latitude: Double(information.hotspots[i].latitude)!, longitude: Double(information.hotspots[i].longitude)!)
             zoneManager.hotspots.append(Hotspot.init(from: newTestPackage))
         }

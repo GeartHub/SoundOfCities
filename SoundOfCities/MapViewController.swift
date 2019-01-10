@@ -18,7 +18,6 @@ class MapViewController: UIViewController {
     let stackView = UIStackView()
 //    @IBOutlet weak var menuButton: UIButton!
     
-    var menuButton = MenuButton.self
     var circleLocation: CLLocationCoordinate2D?
     var track = Track()
     var zoneManager = ZoneManager.instance
