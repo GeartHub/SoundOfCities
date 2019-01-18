@@ -15,7 +15,7 @@ class Styles {
         filledPinkButton.setTitleColor(UIColor.white, for: .normal)
         filledPinkButton.cornerRadius = 10
         
-        let whiteButtonWithPicture = RoundButtonWithPictore.appearance()
+        let whiteButtonWithPicture = RoundButtonWithPicture.appearance()
         whiteButtonWithPicture.backgroundColor = .white
         whiteButtonWithPicture.imageEdgeInsets = UIEdgeInsets(top: 12, left: 17, bottom: 12, right: 17)
         whiteButtonWithPicture.cornerRadius = 27
@@ -34,7 +34,7 @@ class PinkRoundButton: UIButton {
     }
 }
 
-class RoundButtonWithPictore: UIButton {
+class RoundButtonWithPicture: UIButton {
     override func layoutSubviews() {
         super.layoutSubviews()
         

@@ -12,10 +12,10 @@ import MapKit
 
 class MapViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
-    var locationManager = CLLocationManager()
+   private var locationManager: CLLocationManager!
     
     @IBOutlet weak var menuView: UIStackView!
-    let stackView = UIStackView()
+    
 //    @IBOutlet weak var menuButton: UIButton!
     
     var circleLocation: CLLocationCoordinate2D?
@@ -30,15 +30,16 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
+        
+        
         setupLocation()
         doLayout()
-        
     }
  
 
     func doLayout(){
         let safeArea = self.view.safeAreaLayoutGuide
-
+        let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .horizontal
         stackView.distribution = .fillEqually
@@ -49,11 +50,7 @@ class MapViewController: UIViewController {
         stackView.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor, constant: -20).isActive = true
         stackView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 10).isActive = true
         stackView.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -10).isActive = true
-        addButtons()
-        
-    }
-    func addButtons(){
-        
+//        addButtons()
         let menuButtonTypes: [MenuButtonType] = [.tracked, .camera, .hike, .navigation, .menu]
         
         for type in menuButtonTypes{
@@ -63,13 +60,22 @@ class MapViewController: UIViewController {
         stackView.layoutIfNeeded()
         stackView.spacing = 15
         
+        
+    }
+    func addButtons(){
+        
+
     }
     func setupLocation(){
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestAlwaysAuthorization()
-        locationManager.startUpdatingLocation()
-        setCircleOnLocation()
+        DispatchQueue.main.async {
+            
+        self.locationManager = CLLocationManager()
+        self.locationManager.delegate = self
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        self.locationManager.requestAlwaysAuthorization()
+        self.locationManager.startUpdatingLocation()
+        self.setCircleOnLocation()
+        }
         
         
     }
@@ -111,7 +117,7 @@ class MapViewController: UIViewController {
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "HotspotInformationScreen", let destination = segue.destination as? HotspotInformationScreenViewController{
-            destination.hotspot = sender as! Hotspot
+            destination.hotspot = (sender as! Hotspot)
         }
     }
 }
@@ -146,6 +152,9 @@ extension MapViewController: MKMapViewDelegate{
             renderer.strokeColor = resonancePink
             renderer.lineWidth = 1
             return renderer
+        }else if (overlay is MKPolygon){
+            let renderer = MKPolygonRenderer(polygon: overlay as! MKPolygon)
+            renderer.strokeColor = resonancePink
         }
         return MKOverlayRenderer()
     }

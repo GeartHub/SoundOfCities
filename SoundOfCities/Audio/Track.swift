@@ -18,9 +18,14 @@ class Track: NSObject{
     var fadeDuration = 6
     
     func play(name: String){
-        let urlPath = Bundle.main.path(forResource: name, ofType: "mp3")
-        let fileURL = URL(fileURLWithPath: urlPath!)
-        let audioPlayer = playerPool.playerWithURL(url: fileURL)
+        
+        var documentURL = getDocumentsDirectory()
+        documentURL.appendPathComponent("test")
+        
+        let urlPath = documentURL.appendingPathComponent(name)
+        print(urlPath.absoluteString)
+        
+        let audioPlayer = playerPool.playerWithURL(url: urlPath)
         audioPlayer?.prepareToPlay()
         audioPlayer?.volume = 0
         if playerPool.activePlayers[0].isPlaying{
@@ -30,6 +35,11 @@ class Track: NSObject{
         audioPlayer?.setVolume(1, fadeDuration: TimeInterval(fadeDuration))
         audioPlayer?.numberOfLoops = -1
     }
+    func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let documentsDirectory = paths[0]
+        return documentsDirectory
+    }
     func stop(name: String){
         nameOfSong = name
         let activePlayerToStop = findActivePlayer(name: name)
@@ -37,10 +47,6 @@ class Track: NSObject{
             activePlayerToStop!.setVolume(0, fadeDuration: TimeInterval(fadeDuration))
             Timer.scheduledTimer(timeInterval: TimeInterval(fadeDuration), target: self, selector: #selector(self.stopAfterSeconds), userInfo: nil, repeats: false)
         }
-        
-        
-//        let _ : Timer = Timer.scheduledTimer(timeInterval: fadeDuration, target: self, selector: #selector(self.stopAfterSeconds(name: name)), userInfo: nil, repeats: false)
-        
         
     }
     @objc func stopAfterSeconds(){
@@ -50,10 +56,15 @@ class Track: NSObject{
         playerPool.setInactive(player: stopPlayer!)
     }
     func findActivePlayer(name: String)->AVAudioPlayer?{
-        let urlPath = Bundle.main.path(forResource: name, ofType: "mp3")
-        let fileURL = URL(fileURLWithPath: urlPath!)
-//        var activePlayerFromName: AVAudioPlayer? = nil
-        if let activePlayerFromName =  playerPool.activePlayers.first(where: {$0.url == fileURL}){
+        print(name)
+        let urlPath = getDocumentsDirectory().appendingPathComponent("test").appendingPathComponent(name)
+//        let fileURL = URL(fileURLWithPath: urlPath)
+        
+        for item in playerPool.activePlayers{
+            print(item.url)
+            print(urlPath)
+        }
+        if let activePlayerFromName =  playerPool.activePlayers.first(where: {$0.url == urlPath}){
             return activePlayerFromName
         }
         return nil

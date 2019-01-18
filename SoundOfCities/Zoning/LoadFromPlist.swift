@@ -26,7 +26,6 @@ struct hotspot: Decodable {
     let activityDescription: String
     let latitude: String
     let longitude: String
-    
 }
 
 struct zones: Decodable {

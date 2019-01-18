@@ -25,8 +25,12 @@ class HotspotInformationScreenViewController: UIViewController{
     
         hotspotNameLabel.text = hotspot?.name
         hotspotNameLabel.adjustsFontSizeToFitWidth = true
+        hotSpotHistoryInformationTextView.sizeToFit()
         hotSpotHistoryInformationTextView.text = hotspot?.historyInformation
+        hotSpotMusicInformationTextView.sizeToFit()
         hotSpotMusicInformationTextView.text = hotspot?.musicInformation
+        hotSpotActivityInformationTextView.sizeToFit()
         hotSpotActivityInformationTextView.text = hotspot?.activityInformation
+        
     }
 }
