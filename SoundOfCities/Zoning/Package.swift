@@ -60,15 +60,27 @@ class Package {
     func unpackFolder(from package: URL){
         var currentWorkingPath = getDocumentsDirectory()
         var destinationURL = currentWorkingPath
-        print(currentWorkingPath)
+        
         destinationURL.appendPathComponent("test")
         currentWorkingPath.appendPathComponent(package.absoluteString)
+        print(currentWorkingPath)
         do {
+            try fileManager.removeItem(at: destinationURL)
             try fileManager.createDirectory(at: destinationURL, withIntermediateDirectories: true, attributes: nil)
             try fileManager.unzipItem(at: currentWorkingPath, to: destinationURL)
+            deletePackage(fileURL: currentWorkingPath)
             makeTestPackage()
         } catch {
+            deletePackage(fileURL: currentWorkingPath)
             makeTestPackage()
+        }
+    }
+    
+    func deletePackage(fileURL: URL){
+        do{
+            try fileManager.removeItem(at: fileURL)
+        } catch {
+            print(error)
         }
     }
     func download(){
