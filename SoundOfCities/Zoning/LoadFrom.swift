@@ -7,14 +7,20 @@
 //
 
 import Foundation
-
-struct Root: Decodable{
-    private enum Codingkeys: String, CodingKey { case hotspots, zones}
-    
-    let hotspots: [hotspot]
-    let zones: [zone]
+struct audioZones: Decodable {
+    let radius: String?
+    let coords: [Coordinates]
+    let tracks: Tracks
+    let hotspots: [hotspot]?
 }
-
+struct Coordinates: Decodable {
+    let lat: String
+    let lng: String
+}
+struct Tracks: Decodable {
+    var name: String
+    var audio_url: String
+}
 struct hotspot: Decodable {
     private enum CodingKeys: String, CodingKey {
         case name, historyDescription, musicDescription, activityDescription, latitude, longitude
@@ -26,18 +32,4 @@ struct hotspot: Decodable {
     let activityDescription: String
     let latitude: String
     let longitude: String
-}
-
-struct zones: Decodable {
-    private enum CodingKeys : String, CodingKey { case zone }
-    
-    let zone: zone
-}
-struct zone: Decodable {
-    private enum CodingKeys : String, CodingKey { case name, latitude, longitude, radius }
-    
-    let name: String
-    let latitude: String
-    let longitude: String
-    let radius: String
 }

@@ -20,7 +20,9 @@ class Track: NSObject{
     func play(name: String){
         
         var documentURL = getDocumentsDirectory()
-        documentURL.appendPathComponent("test")
+        
+        //TODO: Name of collection here
+        documentURL.appendPathComponent("collection")
         
         let urlPath = documentURL.appendingPathComponent(name)
         print(urlPath.absoluteString)
@@ -57,7 +59,9 @@ class Track: NSObject{
     }
     func findActivePlayer(name: String)->AVAudioPlayer?{
         print(name)
-        let urlPath = getDocumentsDirectory().appendingPathComponent("test").appendingPathComponent(name)
+        
+        //TODO: Name of collection here
+        let urlPath = getDocumentsDirectory().appendingPathComponent("collection").appendingPathComponent(name)
 //        let fileURL = URL(fileURLWithPath: urlPath)
         
         for item in playerPool.activePlayers{

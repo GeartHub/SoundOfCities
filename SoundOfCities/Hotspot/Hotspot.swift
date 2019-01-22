@@ -20,12 +20,12 @@ final class Hotspot{
     
     private init() {}
     
-    init(from: Package){
-        name = from.hotspotName
-        historyInformation = from.hotspotHistoryInformation
-        musicInformation = from.hotspotMusicInformation
-        activityInformation = from.hotspotActivityInformation
-        location = from.hotspotLocation
+    init(with hotspot: hotspot) {
+        name = hotspot.name
+        historyInformation = hotspot.historyDescription
+        musicInformation = hotspot.musicDescription
+        activityInformation = hotspot.activityDescription
+        location = CLLocationCoordinate2D(latitude: Double(hotspot.latitude)!, longitude: Double(hotspot.longitude)!)
     }
     
 }

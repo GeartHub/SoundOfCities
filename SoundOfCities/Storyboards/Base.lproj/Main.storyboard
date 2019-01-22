@@ -73,7 +73,7 @@ Soundscapes are zones connected to tourist sights, which give impressions of the
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Download the audio files and continue" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="84r-t3-RmD">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Download the audio files and continue" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="84r-t3-RmD">
                                         <rect key="frame" x="75" y="485" width="232" height="48"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>

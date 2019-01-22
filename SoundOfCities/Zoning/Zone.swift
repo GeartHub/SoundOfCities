@@ -19,10 +19,17 @@ final class Zone{
     
     private init() {}
     
-    init(from: Package){
-        latitude = from.latitude
-        longitude = from.longitude
-        radius = from.radius
-        zoneName = from.zoneName
+//    init(from: Package){
+//        latitude = from.latitude
+//        longitude = from.longitude
+//        radius = from.radius
+//        zoneName = from.zoneName
+//    }
+    
+    init(with audiozone: audioZones) {
+        latitude = Double(audiozone.coords[0].lat)
+        longitude = Double(audiozone.coords[0].lng)
+        radius = Double(audiozone.radius!)
+        zoneName = audiozone.tracks.audio_url.replacingOccurrences(of: "audio/", with: "", options: .caseInsensitive, range: nil)
     }
 }

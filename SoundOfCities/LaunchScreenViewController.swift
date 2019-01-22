@@ -24,11 +24,7 @@ class LaunchScreenViewController: UIViewController{
         UIView.animate(withDuration: 0.5, animations: {
             self.popImage.transform = self.translate.concatenating(self.scale)
         }, completion: {(value: Bool) in
-            UIView.animate(withDuration: 0.5, animations: {
-                self.popImage.transform = self.translate.concatenating(self.minScale)
-            }, completion: {(value: Bool) in
-                self.performSegue(withIdentifier: "AfterLaunchSegue", sender: nil)
-            })
+            s)
         })
     }
 }

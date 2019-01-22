@@ -32,7 +32,8 @@ class IntroductionViewController: UIViewController {
     }
     
     @IBAction func downloadPackage(_ sender: Any) {
-        package.download()
+//        package.download()
+        package.makeTestPackage(type: .testData)
         
     }
     @objc func waitSeconds(){

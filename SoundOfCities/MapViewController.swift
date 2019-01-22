@@ -30,10 +30,10 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
-        
+        print(zoneManager.zones.count)
         
         setupLocation()
-        doLayout()
+//        doLayout()
     }
  
 
@@ -126,7 +126,7 @@ extension MapViewController: CLLocationManagerDelegate{
         
         if let location = locations.last{
             let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-            let viewRegion = MKCoordinateRegion(center: center, latitudinalMeters: 1000, longitudinalMeters: 1000)
+            let viewRegion = MKCoordinateRegion(center: center, latitudinalMeters: 500, longitudinalMeters: 500)
             self.mapView.setRegion(viewRegion, animated: true)
         }
     }

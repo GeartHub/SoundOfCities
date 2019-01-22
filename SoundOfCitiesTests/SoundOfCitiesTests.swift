@@ -10,11 +10,12 @@ import XCTest
 @testable import SoundOfCities
 
 class SoundOfCitiesTests: XCTestCase {
-    var package = Package()
+    var testPackage = Package()
+    var realPackage = Package()
+    var zoneManager = ZoneManager.instance
     
     override func setUp() {
-        package.makeTestPackage()
-        
+        testPackage.makeTestPackage(type: .testData)
     }
 
     override func tearDown() {
@@ -22,6 +23,10 @@ class SoundOfCitiesTests: XCTestCase {
     }
     
     func testZones(){
+        XCTAssertTrue(zoneManager.zones.count == 4)
+        XCTAssertTrue(zoneManager.hotspots.count == 2)
+        XCTAssertTrue(zoneManager.zones[1].zoneName == "b088f1d9e4dc319bdc1986b141a16d03.mp3")
+        XCTAssertTrue(zoneManager.zones[3].radius == Double("565.980325690556"))
     }
 
     func testExample() {

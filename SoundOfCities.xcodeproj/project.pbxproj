@@ -24,7 +24,7 @@
 		DA79287121D684ED0071CEF4 /* Hotspot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA79287021D684EC0071CEF4 /* Hotspot.swift */; };
 		DA81ABC621B530190007843E /* Zone.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA81ABC521B530190007843E /* Zone.swift */; };
 		DA81ABC821B537550007843E /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA81ABC721B537550007843E /* Package.swift */; };
-		DA82039521E5FA5B00EDB6B2 /* LoadFromPlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA82039421E5FA5B00EDB6B2 /* LoadFromPlist.swift */; };
+		DA82039521E5FA5B00EDB6B2 /* LoadFrom.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA82039421E5FA5B00EDB6B2 /* LoadFrom.swift */; };
 		DAA59B3321C28D5700EF31C3 /* electric_guitar.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DAA59B2F21C28D5600EF31C3 /* electric_guitar.mp3 */; };
 		DAA59B3421C28D5700EF31C3 /* acoustic_guitar.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DAA59B3021C28D5600EF31C3 /* acoustic_guitar.mp3 */; };
 		DAA59B3521C28D5700EF31C3 /* strings.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DAA59B3121C28D5600EF31C3 /* strings.mp3 */; };
@@ -94,7 +94,7 @@
 		DA79287021D684EC0071CEF4 /* Hotspot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hotspot.swift; sourceTree = "<group>"; };
 		DA81ABC521B530190007843E /* Zone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zone.swift; sourceTree = "<group>"; };
 		DA81ABC721B537550007843E /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		DA82039421E5FA5B00EDB6B2 /* LoadFromPlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFromPlist.swift; sourceTree = "<group>"; };
+		DA82039421E5FA5B00EDB6B2 /* LoadFrom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFrom.swift; sourceTree = "<group>"; };
 		DAA59B2F21C28D5600EF31C3 /* electric_guitar.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = electric_guitar.mp3; sourceTree = "<group>"; };
 		DAA59B3021C28D5600EF31C3 /* acoustic_guitar.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = acoustic_guitar.mp3; sourceTree = "<group>"; };
 		DAA59B3121C28D5600EF31C3 /* strings.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = strings.mp3; sourceTree = "<group>"; };
@@ -208,7 +208,7 @@
 				DABBCB2B21C8523500B8BA7D /* ShapeEngine.swift */,
 				DA81ABC521B530190007843E /* Zone.swift */,
 				DA81ABC721B537550007843E /* Package.swift */,
-				DA82039421E5FA5B00EDB6B2 /* LoadFromPlist.swift */,
+				DA82039421E5FA5B00EDB6B2 /* LoadFrom.swift */,
 				DAB05B5B21EF481D0060B126 /* audioZones.json */,
 				DAC7099521E29BCE000024F1 /* Package.plist */,
 			);
@@ -570,7 +570,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA82039521E5FA5B00EDB6B2 /* LoadFromPlist.swift in Sources */,
+				DA82039521E5FA5B00EDB6B2 /* LoadFrom.swift in Sources */,
 				DA6F4D6A21C9201500B82BD9 /* IntroductionViewController.swift in Sources */,
 				DA79287121D684ED0071CEF4 /* Hotspot.swift in Sources */,
 				DA6F4D7721C9217A00B82BD9 /* StyleStuff.swift in Sources */,
