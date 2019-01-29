@@ -24,7 +24,6 @@ class LaunchScreenViewController: UIViewController{
         UIView.animate(withDuration: 0.5, animations: {
             self.popImage.transform = self.translate.concatenating(self.scale)
         }, completion: {(value: Bool) in
-            s)
         })
     }
 }

@@ -11,7 +11,6 @@ import XCTest
 
 class SoundOfCitiesTests: XCTestCase {
     var testPackage = Package()
-    var realPackage = Package()
     var zoneManager = ZoneManager.instance
     
     override func setUp() {
